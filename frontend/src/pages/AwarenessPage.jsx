@@ -218,7 +218,15 @@ export default function AwarenessPage() {
               Sai Vishwaa
             </a>{' '}
             - SCSDF, NFSU Gandhinagar<br />
-            National Cyber Security Awareness Month 2026
+            National Cyber Security Awareness Month 2026<br />
+            <a
+              href="https://nfsu.ac.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: '#FFD700', textDecoration: 'underline', fontSize: '0.9rem', display: 'inline-block', marginTop: '0.35rem' }}
+            >
+              nfsu.ac.in
+            </a>
           </p>
         </div>
 
