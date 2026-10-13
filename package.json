@@ -5,6 +5,8 @@
   "author": "Sai Vishwaa N - SCSDF, NFSU Gandhinagar",
   "private": true,
   "scripts": {
+    "build": "cd frontend && npm install && npm run build && cd ../public-server && npm install",
+    "start": "node public-server/src/index.js",
     "start:public": "cmd /c \"cd public-server && npm start\"",
     "start:organizer": "cmd /c \"cd organizer-dashboard && npm start\"",
     "start:frontend": "cmd /c \"cd frontend && npm run dev\"",

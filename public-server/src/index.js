@@ -1,5 +1,8 @@
 import express from 'express';
 import cookieParser from 'cookie-parser';
+import path from 'path';
+import fs from 'fs';
+import { fileURLToPath } from 'url';
 import { config } from './config/env.js';
 import { configureSecurityHeaders, generateCsrfToken, verifyCsrf } from './config/owasp.js';
 import { getDb, logAudit } from './db/schema.js';
@@ -11,6 +14,10 @@ import gameRoutes from './routes/game.js';
 import exportRoutes from './routes/export.js';
 
 import rateLimit from 'express-rate-limit';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const distPath = path.resolve(__dirname, '../../frontend/dist');
 
 const app = express();
 
@@ -70,6 +77,17 @@ app.use('/api', verifyCsrf, registrationRoutes);
 app.use('/api', verifyCsrf, locationRoutes);
 app.use('/api', verifyCsrf, gameRoutes);
 app.use('/api', verifyCsrf, exportRoutes);
+
+// Serve Frontend SPA if built (Full-Stack single deployment)
+if (fs.existsSync(distPath)) {
+  app.use(express.static(distPath));
+  app.get('*', (req, res, next) => {
+    if (req.path.startsWith('/api') || req.path.startsWith('/admin')) {
+      return next();
+    }
+    res.sendFile(path.join(distPath, 'index.html'));
+  });
+}
 
 // Global Error Handler
 app.use((err, req, res, next) => {
