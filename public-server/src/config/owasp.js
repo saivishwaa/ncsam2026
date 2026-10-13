@@ -11,14 +11,14 @@ export const configureSecurityHeaders = (app) => {
         directives: {
           defaultSrc: ["'self'"],
           scriptSrc: ["'self'", "'unsafe-inline'"],
-          styleSrc: ["'self'", "'unsafe-inline'"],
+          styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
           imgSrc: ["'self'", "data:", "blob:"],
-          connectSrc: ["'self'", config.FRONTEND_URL],
-          fontSrc: ["'self'"],
+          connectSrc: ["'self'", config.FRONTEND_URL, "*"].filter(Boolean),
+          fontSrc: ["'self'", "https://fonts.gstatic.com", "data:"],
           objectSrc: ["'none'"],
           mediaSrc: ["'self'"],
           frameAncestors: ["'none'"],
-          upgradeInsecureRequests: config.NODE_ENV === 'production' ? [] : null
+          upgradeInsecureRequests: null
         }
       },
       crossOriginEmbedderPolicy: false,

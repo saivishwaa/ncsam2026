@@ -17,7 +17,24 @@ import rateLimit from 'express-rate-limit';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const distPath = path.resolve(__dirname, '../../frontend/dist');
+
+const candidateDistPaths = [
+  path.resolve(__dirname, '../dist'),
+  path.resolve(__dirname, '../../frontend/dist'),
+  path.resolve(process.cwd(), 'public-server/dist'),
+  path.resolve(process.cwd(), 'frontend/dist'),
+  path.resolve(process.cwd(), 'dist'),
+  path.resolve(__dirname, '../public'),
+  path.resolve(process.cwd(), '../frontend/dist')
+];
+
+let distPath = null;
+for (const cand of candidateDistPaths) {
+  if (fs.existsSync(cand) && fs.existsSync(path.join(cand, 'index.html'))) {
+    distPath = cand;
+    break;
+  }
+}
 
 const app = express();
 
@@ -79,7 +96,8 @@ app.use('/api', verifyCsrf, gameRoutes);
 app.use('/api', verifyCsrf, exportRoutes);
 
 // Serve Frontend SPA if built (Full-Stack single deployment)
-if (fs.existsSync(distPath)) {
+if (distPath) {
+  console.log(`[STATIC ASSETS] Successfully mounted Frontend SPA from: ${distPath}`);
   app.use(express.static(distPath));
   app.get('*', (req, res, next) => {
     if (req.path.startsWith('/api') || req.path.startsWith('/admin')) {
@@ -87,6 +105,8 @@ if (fs.existsSync(distPath)) {
     }
     res.sendFile(path.join(distPath, 'index.html'));
   });
+} else {
+  console.warn('[STATIC ASSETS] No frontend build found. Checked paths:\n' + candidateDistPaths.map(p => ` - ${p}`).join('\n'));
 }
 
 // Global Error Handler

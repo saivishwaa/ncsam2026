@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Full-Stack Cybersecurity Awareness Web Application for NCSAM 2026 - SCSDF, NFSU Gandhinagar",
   "author": "Sai Vishwaa N - SCSDF, NFSU Gandhinagar",
-  "private": true,
+  "type": "module",
   "scripts": {
-    "build": "cd frontend && npm install --include=dev && npm run build && cd ../public-server && npm install",
+    "build": "cd frontend && npm install --include=dev && npm run build && cd .. && node scripts/copy-dist.js && cd public-server && npm install",
     "start": "node public-server/src/index.js",
     "start:public": "cmd /c \"cd public-server && npm start\"",
     "start:organizer": "cmd /c \"cd organizer-dashboard && npm start\"",

@@ -1,4 +1,4 @@
-﻿# Dependencies
+# Dependencies
 node_modules/
 .pnp
 .pnp.js
@@ -9,6 +9,8 @@ coverage/
 
 # Production Build Artifacts
 dist/
+!public-server/dist/
+!public-server/dist/**
 build/
 .vite/
 
