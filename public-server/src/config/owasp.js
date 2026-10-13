@@ -30,22 +30,42 @@ export const configureSecurityHeaders = (app) => {
     })
   );
 
-  // Strict CORS configuration
+  // Dynamic CORS configuration: allows configured origins, localhost, and any onrender.com subdomains
   const allowedOrigins = [
     config.FRONTEND_URL,
+    process.env.RENDER_EXTERNAL_URL,
     'http://localhost:5173',
     'http://127.0.0.1:5173',
     'http://localhost:5000'
-  ];
+  ].filter(Boolean);
 
   app.use(
     cors({
       origin: (origin, callback) => {
-        if (!origin || allowedOrigins.includes(origin)) {
-          callback(null, true);
-        } else {
-          callback(new Error('Blocked by CORS policy'));
+        // Direct browser navigation, same-origin calls, mobile apps, or curl
+        if (!origin) {
+          return callback(null, true);
         }
+
+        // Configured origins
+        if (allowedOrigins.includes(origin)) {
+          return callback(null, true);
+        }
+
+        // Automatically permit Render deployment hosts and local domains
+        try {
+          const parsed = new URL(origin);
+          if (
+            parsed.hostname.endsWith('.onrender.com') ||
+            parsed.hostname === 'localhost' ||
+            parsed.hostname === '127.0.0.1'
+          ) {
+            return callback(null, true);
+          }
+        } catch (_) {}
+
+        // Reject untrusted cross-origin requests safely without throwing 500 error
+        return callback(null, false);
       },
       credentials: true,
       methods: ['GET', 'POST', 'OPTIONS'],
