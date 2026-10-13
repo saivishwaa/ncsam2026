@@ -12,6 +12,7 @@ import registrationRoutes from './routes/registration.js';
 import locationRoutes from './routes/location.js';
 import gameRoutes from './routes/game.js';
 import exportRoutes from './routes/export.js';
+import adminRoutes from './routes/admin.js';
 
 import rateLimit from 'express-rate-limit';
 
@@ -94,6 +95,7 @@ app.use('/api', verifyCsrf, registrationRoutes);
 app.use('/api', verifyCsrf, locationRoutes);
 app.use('/api', verifyCsrf, gameRoutes);
 app.use('/api', verifyCsrf, exportRoutes);
+app.use('/admin', adminRoutes);
 
 // Serve Frontend SPA if built (Full-Stack single deployment)
 if (distPath) {

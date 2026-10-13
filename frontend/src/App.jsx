@@ -14,10 +14,29 @@ export default function App() {
 
   useEffect(() => { fetchCsrfToken(); }, []);
 
-  // Secret admin route - triple-tap title 5 times or navigate to /#admin
+  // Admin access: navigate to /adminadmin or /#adminadmin or /#admin
   useEffect(() => {
-    const hash = window.location.hash;
-    if (hash === '#adminadminadmin') setPage('admin');
+    const checkAdmin = () => {
+      const path = (window.location.pathname || '').toLowerCase();
+      const hash = (window.location.hash || '').toLowerCase();
+      if (
+        path === '/adminadmin' ||
+        path === '/admin' ||
+        path.startsWith('/admin') ||
+        hash === '#adminadmin' ||
+        hash === '#admin' ||
+        hash === '#adminadminadmin'
+      ) {
+        setPage('admin');
+      }
+    };
+    checkAdmin();
+    window.addEventListener('hashchange', checkAdmin);
+    window.addEventListener('popstate', checkAdmin);
+    return () => {
+      window.removeEventListener('hashchange', checkAdmin);
+      window.removeEventListener('popstate', checkAdmin);
+    };
   }, []);
 
   const handleRegistered = (data) => {

@@ -39,7 +39,13 @@ export default function LandingPage({ onEnter }) {
 
       {/* popup card */}
       <div className="ld-popup" role="main">
-        <div style={{ fontSize: '3rem', lineHeight: 1, marginBottom: '0.5rem' }}>🎁</div>
+        <div
+          style={{ fontSize: '3rem', lineHeight: 1, marginBottom: '0.5rem', cursor: 'pointer', userSelect: 'none' }}
+          title="Lucky Draw"
+          onDoubleClick={() => { window.location.hash = '#adminadmin'; }}
+        >
+          🎁
+        </div>
 
         <h1 className="ld-title">
           LUCKY<br /><span>DRAW</span>
