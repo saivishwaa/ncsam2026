@@ -1,0 +1,14 @@
+{
+  "name": "lucky-draw-ncsam-2026",
+  "version": "1.0.0",
+  "description": "Full-Stack Cybersecurity Awareness Web Application for NCSAM 2026 - SCSDF, NFSU Gandhinagar",
+  "author": "Sai Vishwaa N - SCSDF, NFSU Gandhinagar",
+  "private": true,
+  "scripts": {
+    "start:public": "cmd /c \"cd public-server && npm start\"",
+    "start:organizer": "cmd /c \"cd organizer-dashboard && npm start\"",
+    "start:frontend": "cmd /c \"cd frontend && npm run dev\"",
+    "test": "cmd /c \"cd public-server && npm test\" && cmd /c \"cd organizer-dashboard && npm test\"",
+    "build:frontend": "cmd /c \"cd frontend && npm run build\""
+  }
+}
