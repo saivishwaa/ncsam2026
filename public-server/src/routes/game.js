@@ -62,6 +62,7 @@ router.post(
         .run(registrationId, chosen.title, chosen.index, now, now);
 
       logAudit('GAME_SPIN_COMPLETED', { registrationId, outcome: chosen.title });
+      console.log('[PERMANENT_GAME_RECORD]', JSON.stringify({ registrationId, outcome: chosen.title, segmentIndex: chosen.index, createdAt: now }));
 
       return res.status(201).json({
         success: true, replayed: false,

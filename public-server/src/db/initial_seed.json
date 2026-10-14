@@ -439,6 +439,16 @@
       "created_at": "2026-10-14T10:23:21.179Z",
       "ip_hash": "audit_restored",
       "email": "nfsu-2026-43d0f469@nfsu.ac.in"
+    },
+    {
+      "id": 130,
+      "registration_id": "NFSU-2026-0DC95302",
+      "full_name": "Rudransh Soni",
+      "phone_number": "sonirudransh2532@gmail.com",
+      "course": "BBA",
+      "created_at": "2026-10-14T20:12:52.202Z",
+      "ip_hash": "live_sync",
+      "email": "sonirudransh2532@gmail.com"
     }
   ],
   "locations": [
@@ -783,6 +793,357 @@
       "longitude": 72.637,
       "accuracy": 15,
       "created_at": "2026-10-14T10:23:21.179Z"
+    },
+    {
+      "id": 112,
+      "registration_id": "NFSU-2026-0DC95302",
+      "opted_in": 1,
+      "latitude": 23.209,
+      "longitude": 72.662,
+      "accuracy": 15,
+      "created_at": "2026-10-14T20:12:52.202Z"
+    },
+    {
+      "id": 113,
+      "registration_id": "NFSU-2026-43D0F469",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-14T10:23:21.179Z"
+    },
+    {
+      "id": 114,
+      "registration_id": "NFSU-2026-E7A344A3",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-13T16:47:03.711Z"
+    },
+    {
+      "id": 115,
+      "registration_id": "NFSU-2026-B328DDA1",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-13T16:44:42.918Z"
+    },
+    {
+      "id": 116,
+      "registration_id": "NFSU-2026-10463393",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-13T16:37:37.470Z"
+    },
+    {
+      "id": 117,
+      "registration_id": "NFSU-2026-357E3DE9",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-13T16:34:38.023Z"
+    },
+    {
+      "id": 118,
+      "registration_id": "NFSU-2026-B6F73958",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-13T16:25:48.546Z"
+    },
+    {
+      "id": 119,
+      "registration_id": "NFSU-2026-B94DDF17",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-13T16:22:22.166Z"
+    },
+    {
+      "id": 120,
+      "registration_id": "NFSU-2026-287F70DF",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-13T16:00:56.763Z"
+    },
+    {
+      "id": 121,
+      "registration_id": "NFSU-2026-67C9402F",
+      "opted_in": 0,
+      "latitude": null,
+      "longitude": null,
+      "accuracy": 15,
+      "created_at": "2026-10-13T12:20:49.038Z"
+    },
+    {
+      "id": 122,
+      "registration_id": "NFSU-2026-9146C974",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-13T12:20:12.658Z"
+    },
+    {
+      "id": 123,
+      "registration_id": "NFSU-2026-E8FD0E06",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-13T12:18:42.397Z"
+    },
+    {
+      "id": 124,
+      "registration_id": "NFSU-2026-47EA0A00",
+      "opted_in": 0,
+      "latitude": null,
+      "longitude": null,
+      "accuracy": 15,
+      "created_at": "2026-10-13T12:07:53.183Z"
+    },
+    {
+      "id": 125,
+      "registration_id": "NFSU-2026-7E2A573D",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-13T11:59:20.430Z"
+    },
+    {
+      "id": 126,
+      "registration_id": "NFSU-2026-714DC5C8",
+      "opted_in": 0,
+      "latitude": null,
+      "longitude": null,
+      "accuracy": 15,
+      "created_at": "2026-10-13T11:48:24.990Z"
+    },
+    {
+      "id": 127,
+      "registration_id": "NFSU-2026-37398B86",
+      "opted_in": 0,
+      "latitude": null,
+      "longitude": null,
+      "accuracy": 15,
+      "created_at": "2026-10-13T11:42:10.399Z"
+    },
+    {
+      "id": 128,
+      "registration_id": "NFSU-2026-C3BF822F",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:46:11.428Z"
+    },
+    {
+      "id": 129,
+      "registration_id": "NFSU-2026-472D0D88",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:44:53.409Z"
+    },
+    {
+      "id": 130,
+      "registration_id": "NFSU-2026-1E69E006",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:41:25.603Z"
+    },
+    {
+      "id": 131,
+      "registration_id": "NFSU-2026-497C5068",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:39:47.336Z"
+    },
+    {
+      "id": 132,
+      "registration_id": "NFSU-2026-90028DC6",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:39:16.878Z"
+    },
+    {
+      "id": 133,
+      "registration_id": "NFSU-2026-6AD6FC0F",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:36:17.876Z"
+    },
+    {
+      "id": 134,
+      "registration_id": "NFSU-2026-DA10065A",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:35:35.733Z"
+    },
+    {
+      "id": 135,
+      "registration_id": "NFSU-2026-B69FEEFD",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:34:05.017Z"
+    },
+    {
+      "id": 136,
+      "registration_id": "NFSU-2026-E1865E04",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:30:42.019Z"
+    },
+    {
+      "id": 137,
+      "registration_id": "NFSU-2026-3D39ED71",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:28:37.768Z"
+    },
+    {
+      "id": 138,
+      "registration_id": "NFSU-2026-59847493",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:22:46.459Z"
+    },
+    {
+      "id": 139,
+      "registration_id": "NFSU-2026-CE5A5BE1",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:21:12.709Z"
+    },
+    {
+      "id": 140,
+      "registration_id": "NFSU-2026-2076E63C",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:18:41.802Z"
+    },
+    {
+      "id": 141,
+      "registration_id": "NFSU-2026-A7B41689",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:16:22.078Z"
+    },
+    {
+      "id": 142,
+      "registration_id": "NFSU-2026-2880A2E7",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:15:54.974Z"
+    },
+    {
+      "id": 143,
+      "registration_id": "NFSU-2026-7EED7867",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:09:30.780Z"
+    },
+    {
+      "id": 144,
+      "registration_id": "NFSU-2026-38F6580C",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:04:52.480Z"
+    },
+    {
+      "id": 145,
+      "registration_id": "NFSU-2026-FE4B3885",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:02:49.227Z"
+    },
+    {
+      "id": 146,
+      "registration_id": "NFSU-2026-598BA4BE",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T19:49:09.401Z"
+    },
+    {
+      "id": 147,
+      "registration_id": "NFSU-2026-A30B14F5",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T19:48:36.317Z"
+    },
+    {
+      "id": 148,
+      "registration_id": "NFSU-2026-908E3F7F",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T19:47:48.842Z"
+    },
+    {
+      "id": 149,
+      "registration_id": "NFSU-2026-36F624AD",
+      "opted_in": 0,
+      "latitude": null,
+      "longitude": null,
+      "accuracy": 15,
+      "created_at": "2026-10-10T19:21:15.327Z"
+    },
+    {
+      "id": 150,
+      "registration_id": "NFSU-2026-0AB3A000",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T19:18:06.689Z"
     }
   ],
   "games": [
@@ -1113,6 +1474,14 @@
       "segment_index": 1,
       "created_at": "2026-10-14T10:23:21.179Z",
       "completed_at": "2026-10-14T10:23:21.179Z"
+    },
+    {
+      "id": 121,
+      "registration_id": "NFSU-2026-0DC95302",
+      "outcome": "Treasure Hunt Ticket",
+      "segment_index": 1,
+      "created_at": "2026-10-14T20:12:52.202Z",
+      "completed_at": "2026-10-14T20:12:52.202Z"
     }
   ],
   "audit": [

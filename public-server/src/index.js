@@ -7,6 +7,7 @@ import { config } from './config/env.js';
 import { configureSecurityHeaders, generateCsrfToken, verifyCsrf } from './config/owasp.js';
 import { getDb, logAudit } from './db/schema.js';
 import { startRetentionCron } from './services/retentionService.js';
+import { startKeepAlive } from './services/keepAlive.js';
 
 import registrationRoutes from './routes/registration.js';
 import locationRoutes from './routes/location.js';
@@ -125,6 +126,9 @@ app.use((err, req, res, next) => {
 
 // Start 30-day retention cron job
 startRetentionCron();
+
+// Start 9-minute keep-alive ping to prevent Render free-tier sleep
+startKeepAlive();
 
 // Start Server
 if (process.env.NODE_ENV !== 'test') {

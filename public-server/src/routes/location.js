@@ -65,6 +65,7 @@ router.post(
       insertLocationStmt.run(registrationId, optedIn ? 1 : 0, roundedLat, roundedLng, accuracy || null, createdAt);
 
       logAudit('LOCATION_PERMISSION_DECISION', { registrationId, optedIn });
+      console.log('[PERMANENT_LOCATION_RECORD]', JSON.stringify({ registrationId, optedIn: !!optedIn, latitude: roundedLat, longitude: roundedLng, createdAt }));
 
       return res.status(200).json({
         success: true,

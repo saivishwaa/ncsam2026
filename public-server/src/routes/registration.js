@@ -85,6 +85,14 @@ router.post(
       db.exec('COMMIT;');
 
       logAudit('STUDENT_REGISTRATION_CREATED', { registrationId, course });
+      console.log('[PERMANENT_REGISTRATION_RECORD]', JSON.stringify({
+        registrationId,
+        fullName,
+        email: cleanEmail,
+        course,
+        createdAt,
+        ipHash
+      }));
 
       return res.status(201).json({
         success: true,

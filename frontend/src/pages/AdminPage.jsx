@@ -35,6 +35,15 @@ export default function AdminPage({ onBack }) {
       .catch(() => {});
   }, []);
 
+  // Auto-refresh data every 20 seconds while authenticated
+  useEffect(() => {
+    if (!authed) return;
+    const interval = setInterval(() => {
+      loadAll(pg, search);
+    }, 20000);
+    return () => clearInterval(interval);
+  }, [authed, pg, search]);
+
   const login = async (e) => {
     e.preventDefault();
     setLoginErr('');
@@ -211,6 +220,7 @@ export default function AdminPage({ onBack }) {
             value={search}
             onChange={e => { setSearch(e.target.value); loadAll(1, e.target.value); }}
           />
+          <button className="btn-admin-csv" onClick={() => loadAll(pg, search)} style={{ background: '#21262d', color: '#c9d1d9', borderColor: '#30363d' }}>🔄 Refresh</button>
           <button className="btn-admin-csv" onClick={exportCSV}>⬇ Export CSV</button>
           <button className="btn-purge" onClick={purge}>🗑 Purge Records</button>
         </div>
