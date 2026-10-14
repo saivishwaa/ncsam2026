@@ -348,14 +348,22 @@ router.post('/import-records', requireAdminAuth, (req, res) => {
 
     let imported = 0;
     for (const r of records) {
-      if (!r.registration_id || !r.full_name) continue;
-      const cleanEmail = (r.email || r.phone_number || '').trim().toLowerCase();
-      insReg.run(r.registration_id, r.full_name, cleanEmail, cleanEmail, r.course || 'Other', r.created_at || new Date().toISOString(), 'admin_imported');
-      if (r.location_opted_in !== undefined && r.location_opted_in !== null) {
-        insLoc.run(r.registration_id, r.location_opted_in ? 1 : 0, r.latitude || null, r.longitude || null, 15, r.created_at || new Date().toISOString());
+      const name = (r.full_name || r.fullName || r.name || '').trim();
+      const email = (r.email || r.mail || r.phone_number || '').trim().toLowerCase();
+      if (!name || !email) continue;
+
+      const regId = r.registration_id || r.registrationId || `NFSU-2026-${crypto.randomBytes(4).toString('hex').toUpperCase()}`;
+      const course = r.course || 'Other';
+      const createdAt = r.created_at || r.createdAt || new Date().toISOString();
+      const outcome = r.outcome || r.gameOutcome || null;
+      const optedIn = r.location_opted_in !== undefined ? r.location_opted_in : r.locationOptedIn;
+
+      insReg.run(regId, name, email, email, course, createdAt, 'admin_imported');
+      if (optedIn !== undefined && optedIn !== null) {
+        insLoc.run(regId, optedIn ? 1 : 0, r.latitude || (optedIn ? 23.216 : null), r.longitude || (optedIn ? 72.637 : null), 15, createdAt);
       }
-      if (r.outcome) {
-        insGame.run(r.registration_id, r.outcome, r.segment_index || 1, r.created_at || new Date().toISOString(), r.created_at || new Date().toISOString());
+      if (outcome) {
+        insGame.run(regId, outcome, r.segment_index || r.segmentIndex || 1, createdAt, createdAt);
       }
       imported++;
     }

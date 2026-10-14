@@ -29,6 +29,8 @@ export default function AdminPage({ onBack }) {
   const [msg, setMsg]           = useState('');
   const [msgType, setMsgType]   = useState('info');
   const [showAddModal, setShowAddModal] = useState(false);
+  const [addMode, setAddMode]   = useState('single');
+  const [bulkText, setBulkText] = useState('');
   const [addForm, setAddForm]   = useState({ fullName: '', email: '', course: 'M.Tech Cyber Security', outcome: 'Better Luck Next Time' });
 
   useEffect(() => {
@@ -162,6 +164,61 @@ export default function AdminPage({ onBack }) {
     }
   };
 
+  const handleBulkImport = async (e) => {
+    e.preventDefault();
+    if (!bulkText.trim()) return;
+    try {
+      let records = [];
+      const trimmed = bulkText.trim();
+      if (trimmed.startsWith('[')) {
+        records = JSON.parse(trimmed);
+      } else if (trimmed.includes('[PERMANENT_REGISTRATION_RECORD]')) {
+        const lines = trimmed.split('\n');
+        for (const line of lines) {
+          const idx = line.indexOf('[PERMANENT_REGISTRATION_RECORD]');
+          if (idx !== -1) {
+            const jsonPart = line.substring(idx + '[PERMANENT_REGISTRATION_RECORD]'.length).trim();
+            try { records.push(JSON.parse(jsonPart)); } catch (_) {}
+          }
+        }
+      } else {
+        const lines = trimmed.split('\n').map(l => l.trim()).filter(Boolean);
+        for (const line of lines) {
+          if (line.startsWith('{') && line.endsWith('}')) {
+            try { records.push(JSON.parse(line)); } catch (_) {}
+          } else if (line.includes(',')) {
+            const parts = line.split(',').map(s => s.trim().replace(/^["']|["']$/g, ''));
+            if (parts.length >= 2 && parts[0].toLowerCase() !== 'name' && parts[0].toLowerCase() !== 'full name') {
+              records.push({
+                fullName: parts[0],
+                email: parts[1],
+                course: parts[2] || 'Other',
+                outcome: parts[3] || 'Better Luck Next Time'
+              });
+            }
+          }
+        }
+      }
+
+      if (records.length === 0) {
+        throw new Error('No valid participant records found in the input text.');
+      }
+
+      const res = await adminFetch('/import-records', {
+        method: 'POST',
+        body: JSON.stringify({ records }),
+      });
+      setMsg(res.message || `Successfully imported ${records.length} records.`);
+      setMsgType('success');
+      setShowAddModal(false);
+      setBulkText('');
+      await loadAll(1, '');
+    } catch (err) {
+      setMsg('Bulk import failed: ' + err.message);
+      setMsgType('error');
+    }
+  };
+
   if (!authed) {
     return (
       <div className="admin-login-wrap">
@@ -261,64 +318,112 @@ export default function AdminPage({ onBack }) {
               background: '#0d1117', border: '1px solid #30363d', borderRadius: '10px',
               padding: '1.5rem', width: '100%', maxWidth: '450px', color: '#c9d1d9'
             }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
-                <h3 style={{ margin: 0, fontSize: '1.1rem', color: '#f0f6fc' }}>➕ Add / Recover Student Record</h3>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.8rem' }}>
+                <h3 style={{ margin: 0, fontSize: '1.1rem', color: '#f0f6fc' }}>➕ Add / Recover Student Records</h3>
                 <button onClick={() => setShowAddModal(false)} style={{ background: 'none', border: 'none', color: '#8b949e', fontSize: '1.2rem', cursor: 'pointer' }}>✕</button>
               </div>
-              <form onSubmit={handleAddParticipant} style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-                <div>
-                  <label style={{ fontSize: '0.8rem', color: '#8b949e', display: 'block', marginBottom: '0.2rem' }}>Full Name *</label>
-                  <input
-                    type="text" required
-                    className="admin-input" style={{ width: '100%', padding: '0.5rem', background: '#161b22', border: '1px solid #30363d', color: '#f0f6fc', borderRadius: '6px' }}
-                    placeholder="e.g. Rahul Sharma"
-                    value={addForm.fullName}
-                    onChange={e => setAddForm({ ...addForm, fullName: e.target.value })}
-                  />
-                </div>
-                <div>
-                  <label style={{ fontSize: '0.8rem', color: '#8b949e', display: 'block', marginBottom: '0.2rem' }}>Email / Mail ID *</label>
-                  <input
-                    type="email" required
-                    className="admin-input" style={{ width: '100%', padding: '0.5rem', background: '#161b22', border: '1px solid #30363d', color: '#f0f6fc', borderRadius: '6px' }}
-                    placeholder="student@nfsu.ac.in"
-                    value={addForm.email}
-                    onChange={e => setAddForm({ ...addForm, email: e.target.value })}
-                  />
-                </div>
-                <div>
-                  <label style={{ fontSize: '0.8rem', color: '#8b949e', display: 'block', marginBottom: '0.2rem' }}>Course / Program</label>
-                  <select
-                    className="admin-input" style={{ width: '100%', padding: '0.5rem', background: '#161b22', border: '1px solid #30363d', color: '#f0f6fc', borderRadius: '6px' }}
-                    value={addForm.course}
-                    onChange={e => setAddForm({ ...addForm, course: e.target.value })}
-                  >
-                    <option value="M.Tech Cyber Security">M.Tech Cyber Security</option>
-                    <option value="M.Sc Digital Forensics & Information Security">M.Sc Digital Forensics & Information Security</option>
-                    <option value="B.Tech - M.Tech Computer Science & Engineering (Cyber Security)">B.Tech - M.Tech (Cyber Security)</option>
-                    <option value="BBA">BBA</option>
-                    <option value="B.Tech">B.Tech</option>
-                    <option value="Other">Other</option>
-                  </select>
-                </div>
-                <div>
-                  <label style={{ fontSize: '0.8rem', color: '#8b949e', display: 'block', marginBottom: '0.2rem' }}>Game Prize Outcome</label>
-                  <select
-                    className="admin-input" style={{ width: '100%', padding: '0.5rem', background: '#161b22', border: '1px solid #30363d', color: '#f0f6fc', borderRadius: '6px' }}
-                    value={addForm.outcome}
-                    onChange={e => setAddForm({ ...addForm, outcome: e.target.value })}
-                  >
-                    <option value="Better Luck Next Time">Better Luck Next Time</option>
-                    <option value="One More Spin">One More Spin</option>
-                    <option value="Treasure Hunt Ticket">Treasure Hunt Ticket</option>
-                    <option value="Mobile Phone">Mobile Phone</option>
-                  </select>
-                </div>
-                <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '0.5rem', marginTop: '0.5rem' }}>
-                  <button type="button" onClick={() => setShowAddModal(false)} style={{ padding: '0.5rem 1rem', background: '#21262d', border: '1px solid #30363d', color: '#c9d1d9', borderRadius: '6px', cursor: 'pointer' }}>Cancel</button>
-                  <button type="submit" style={{ padding: '0.5rem 1rem', background: '#238636', border: '1px solid #2ea043', color: '#fff', borderRadius: '6px', cursor: 'pointer', fontWeight: 600 }}>Save to Database</button>
-                </div>
-              </form>
+
+              {/* Mode Selector Tabs */}
+              <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '1rem', borderBottom: '1px solid #30363d', paddingBottom: '0.5rem' }}>
+                <button
+                  type="button"
+                  onClick={() => setAddMode('single')}
+                  style={{
+                    padding: '0.35rem 0.8rem', fontSize: '0.85rem', borderRadius: '5px', border: 'none', cursor: 'pointer',
+                    background: addMode === 'single' ? '#1f6feb' : '#21262d', color: '#fff'
+                  }}
+                >
+                  Single Entry
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setAddMode('bulk')}
+                  style={{
+                    padding: '0.35rem 0.8rem', fontSize: '0.85rem', borderRadius: '5px', border: 'none', cursor: 'pointer',
+                    background: addMode === 'bulk' ? '#1f6feb' : '#21262d', color: '#fff'
+                  }}
+                >
+                  📋 Bulk Paste JSON / Log / CSV
+                </button>
+              </div>
+
+              {addMode === 'single' ? (
+                <form onSubmit={handleAddParticipant} style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+                  <div>
+                    <label style={{ fontSize: '0.8rem', color: '#8b949e', display: 'block', marginBottom: '0.2rem' }}>Full Name *</label>
+                    <input
+                      type="text" required
+                      className="admin-input" style={{ width: '100%', padding: '0.5rem', background: '#161b22', border: '1px solid #30363d', color: '#f0f6fc', borderRadius: '6px' }}
+                      placeholder="e.g. Rahul Sharma"
+                      value={addForm.fullName}
+                      onChange={e => setAddForm({ ...addForm, fullName: e.target.value })}
+                    />
+                  </div>
+                  <div>
+                    <label style={{ fontSize: '0.8rem', color: '#8b949e', display: 'block', marginBottom: '0.2rem' }}>Email / Mail ID *</label>
+                    <input
+                      type="email" required
+                      className="admin-input" style={{ width: '100%', padding: '0.5rem', background: '#161b22', border: '1px solid #30363d', color: '#f0f6fc', borderRadius: '6px' }}
+                      placeholder="student@nfsu.ac.in"
+                      value={addForm.email}
+                      onChange={e => setAddForm({ ...addForm, email: e.target.value })}
+                    />
+                  </div>
+                  <div>
+                    <label style={{ fontSize: '0.8rem', color: '#8b949e', display: 'block', marginBottom: '0.2rem' }}>Course / Program</label>
+                    <select
+                      className="admin-input" style={{ width: '100%', padding: '0.5rem', background: '#161b22', border: '1px solid #30363d', color: '#f0f6fc', borderRadius: '6px' }}
+                      value={addForm.course}
+                      onChange={e => setAddForm({ ...addForm, course: e.target.value })}
+                    >
+                      <option value="M.Tech Cyber Security">M.Tech Cyber Security</option>
+                      <option value="M.Sc Digital Forensics & Information Security">M.Sc Digital Forensics & Information Security</option>
+                      <option value="B.Tech - M.Tech Computer Science & Engineering (Cyber Security)">B.Tech - M.Tech (Cyber Security)</option>
+                      <option value="BBA">BBA</option>
+                      <option value="B.Tech">B.Tech</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label style={{ fontSize: '0.8rem', color: '#8b949e', display: 'block', marginBottom: '0.2rem' }}>Game Prize Outcome</label>
+                    <select
+                      className="admin-input" style={{ width: '100%', padding: '0.5rem', background: '#161b22', border: '1px solid #30363d', color: '#f0f6fc', borderRadius: '6px' }}
+                      value={addForm.outcome}
+                      onChange={e => setAddForm({ ...addForm, outcome: e.target.value })}
+                    >
+                      <option value="Better Luck Next Time">Better Luck Next Time</option>
+                      <option value="One More Spin">One More Spin</option>
+                      <option value="Treasure Hunt Ticket">Treasure Hunt Ticket</option>
+                      <option value="Mobile Phone">Mobile Phone</option>
+                    </select>
+                  </div>
+                  <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '0.5rem', marginTop: '0.5rem' }}>
+                    <button type="button" onClick={() => setShowAddModal(false)} style={{ padding: '0.5rem 1rem', background: '#21262d', border: '1px solid #30363d', color: '#c9d1d9', borderRadius: '6px', cursor: 'pointer' }}>Cancel</button>
+                    <button type="submit" style={{ padding: '0.5rem 1rem', background: '#238636', border: '1px solid #2ea043', color: '#fff', borderRadius: '6px', cursor: 'pointer', fontWeight: 600 }}>Save to Database</button>
+                  </div>
+                </form>
+              ) : (
+                <form onSubmit={handleBulkImport} style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+                  <div>
+                    <label style={{ fontSize: '0.8rem', color: '#8b949e', display: 'block', marginBottom: '0.2rem' }}>
+                      Paste JSON Array, Render Log lines, or CSV (Name,Email,Course,Outcome):
+                    </label>
+                    <textarea
+                      required
+                      rows={8}
+                      className="admin-input"
+                      style={{ width: '100%', padding: '0.5rem', background: '#161b22', border: '1px solid #30363d', color: '#f0f6fc', borderRadius: '6px', fontFamily: 'monospace', fontSize: '0.78rem' }}
+                      placeholder={`Example JSON:\n[{"fullName":"Rahul","email":"rahul@nfsu.ac.in","course":"B.Tech","outcome":"One More Spin"}]\n\nOr CSV:\nRahul Sharma,rahul@nfsu.ac.in,B.Tech,Better Luck Next Time`}
+                      value={bulkText}
+                      onChange={e => setBulkText(e.target.value)}
+                    />
+                  </div>
+                  <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '0.5rem', marginTop: '0.5rem' }}>
+                    <button type="button" onClick={() => setShowAddModal(false)} style={{ padding: '0.5rem 1rem', background: '#21262d', border: '1px solid #30363d', color: '#c9d1d9', borderRadius: '6px', cursor: 'pointer' }}>Cancel</button>
+                    <button type="submit" style={{ padding: '0.5rem 1rem', background: '#1f6feb', border: '1px solid #388bfd', color: '#fff', borderRadius: '6px', cursor: 'pointer', fontWeight: 600 }}>Import All Records</button>
+                  </div>
+                </form>
+              )}
             </div>
           </div>
         )}
