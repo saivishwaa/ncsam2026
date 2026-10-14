@@ -9,7 +9,7 @@ const DEFAULT_SECRET = 'ncsam2026_nfsu_scsdf_super_secret_master_key_change_in_p
 export const config = {
   PORT: process.env.PORT || 5001,
   NODE_ENV: process.env.NODE_ENV || 'development',
-  DB_PATH: process.env.DB_PATH || path.join(process.cwd(), 'organizer_data.db'),
+  DB_PATH: process.env.DB_PATH || (process.env.NODE_ENV === 'test' ? path.join(process.cwd(), 'test_organizer_data.db') : path.join(process.cwd(), 'organizer_data.db')),
   SESSION_SECRET: process.env.SESSION_SECRET || 'ncsam_2026_organizer_session_secret_key_88f',
   ENCRYPTION_KEY: process.env.ENCRYPTION_KEY || crypto.createHash('sha256').update(DEFAULT_SECRET).digest('hex'),
   ADMIN_USER: process.env.ADMIN_USER || 'adminadmin',

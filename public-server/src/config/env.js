@@ -10,7 +10,7 @@ export const config = {
   PORT: process.env.PORT || 5000,
   NODE_ENV: process.env.NODE_ENV || 'development',
   FRONTEND_URL: process.env.FRONTEND_URL || 'http://localhost:5173',
-  DB_PATH: process.env.DB_PATH || path.join(process.cwd(), 'public_data.db'),
+  DB_PATH: process.env.DB_PATH || (process.env.NODE_ENV === 'test' ? path.join(process.cwd(), 'test_public_data.db') : path.join(process.cwd(), 'public_data.db')),
   ENCRYPTION_KEY: process.env.ENCRYPTION_KEY || crypto.createHash('sha256').update(DEFAULT_SECRET).digest('hex'),
   RETENTION_DAYS: parseInt(process.env.RETENTION_DAYS || '30', 10),
   EVENT_DATE: process.env.EVENT_DATE || '2026-10-31',

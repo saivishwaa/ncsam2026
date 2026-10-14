@@ -116,12 +116,18 @@ export function getPublicDb() {
     }
   }
 
-  const possiblePaths = [
-    path.join(process.cwd(), '../public-server/public_data.db'),
-    path.join(process.cwd(), 'public_data.db'),
-    path.join(process.cwd(), 'public-server/public_data.db'),
-    'd:/ncsam 2026/lucky-draw-v2/lucky-draw/public-server/public_data.db'
-  ];
+  const isTest = process.env.NODE_ENV === 'test';
+  const possiblePaths = isTest
+    ? [
+        path.join(process.cwd(), '../public-server/test_public_data.db'),
+        path.join(process.cwd(), 'test_public_data.db')
+      ]
+    : [
+        path.join(process.cwd(), '../public-server/public_data.db'),
+        path.join(process.cwd(), 'public_data.db'),
+        path.join(process.cwd(), 'public-server/public_data.db'),
+        'd:/ncsam 2026/lucky-draw-v2/lucky-draw/public-server/public_data.db'
+      ];
 
   for (const dbPath of possiblePaths) {
     if (fs.existsSync(dbPath)) {
