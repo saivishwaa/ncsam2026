@@ -28,6 +28,8 @@ export default function AdminPage({ onBack }) {
   const [loading, setLoading]   = useState(false);
   const [msg, setMsg]           = useState('');
   const [msgType, setMsgType]   = useState('info');
+  const [showAddModal, setShowAddModal] = useState(false);
+  const [addForm, setAddForm]   = useState({ fullName: '', email: '', course: 'M.Tech Cyber Security', outcome: 'Better Luck Next Time' });
 
   useEffect(() => {
     adminFetch('/session')
@@ -137,6 +139,29 @@ export default function AdminPage({ onBack }) {
     }
   };
 
+  const handleAddParticipant = async (e) => {
+    e.preventDefault();
+    if (!addForm.fullName.trim() || !addForm.email.trim()) {
+      setMsg('Name and email are required');
+      setMsgType('error');
+      return;
+    }
+    try {
+      const res = await adminFetch('/add-participant', {
+        method: 'POST',
+        body: JSON.stringify(addForm),
+      });
+      setMsg(res.message || 'Participant added successfully.');
+      setMsgType('success');
+      setShowAddModal(false);
+      setAddForm({ fullName: '', email: '', course: 'M.Tech Cyber Security', outcome: 'Better Luck Next Time' });
+      await loadAll(1, '');
+    } catch (err) {
+      setMsg('Failed to add participant: ' + err.message);
+      setMsgType('error');
+    }
+  };
+
   if (!authed) {
     return (
       <div className="admin-login-wrap">
@@ -220,10 +245,83 @@ export default function AdminPage({ onBack }) {
             value={search}
             onChange={e => { setSearch(e.target.value); loadAll(1, e.target.value); }}
           />
+          <button className="btn-admin-csv" onClick={() => setShowAddModal(true)} style={{ background: '#238636', color: '#fff', borderColor: '#2ea043' }}>➕ Add / Recover Record</button>
           <button className="btn-admin-csv" onClick={() => loadAll(pg, search)} style={{ background: '#21262d', color: '#c9d1d9', borderColor: '#30363d' }}>🔄 Refresh</button>
           <button className="btn-admin-csv" onClick={exportCSV}>⬇ Export CSV</button>
           <button className="btn-purge" onClick={purge}>🗑 Purge Records</button>
         </div>
+
+        {/* Modal for adding / recovering records */}
+        {showAddModal && (
+          <div style={{
+            position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.7)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 9999, padding: '1rem'
+          }}>
+            <div style={{
+              background: '#0d1117', border: '1px solid #30363d', borderRadius: '10px',
+              padding: '1.5rem', width: '100%', maxWidth: '450px', color: '#c9d1d9'
+            }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+                <h3 style={{ margin: 0, fontSize: '1.1rem', color: '#f0f6fc' }}>➕ Add / Recover Student Record</h3>
+                <button onClick={() => setShowAddModal(false)} style={{ background: 'none', border: 'none', color: '#8b949e', fontSize: '1.2rem', cursor: 'pointer' }}>✕</button>
+              </div>
+              <form onSubmit={handleAddParticipant} style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+                <div>
+                  <label style={{ fontSize: '0.8rem', color: '#8b949e', display: 'block', marginBottom: '0.2rem' }}>Full Name *</label>
+                  <input
+                    type="text" required
+                    className="admin-input" style={{ width: '100%', padding: '0.5rem', background: '#161b22', border: '1px solid #30363d', color: '#f0f6fc', borderRadius: '6px' }}
+                    placeholder="e.g. Rahul Sharma"
+                    value={addForm.fullName}
+                    onChange={e => setAddForm({ ...addForm, fullName: e.target.value })}
+                  />
+                </div>
+                <div>
+                  <label style={{ fontSize: '0.8rem', color: '#8b949e', display: 'block', marginBottom: '0.2rem' }}>Email / Mail ID *</label>
+                  <input
+                    type="email" required
+                    className="admin-input" style={{ width: '100%', padding: '0.5rem', background: '#161b22', border: '1px solid #30363d', color: '#f0f6fc', borderRadius: '6px' }}
+                    placeholder="student@nfsu.ac.in"
+                    value={addForm.email}
+                    onChange={e => setAddForm({ ...addForm, email: e.target.value })}
+                  />
+                </div>
+                <div>
+                  <label style={{ fontSize: '0.8rem', color: '#8b949e', display: 'block', marginBottom: '0.2rem' }}>Course / Program</label>
+                  <select
+                    className="admin-input" style={{ width: '100%', padding: '0.5rem', background: '#161b22', border: '1px solid #30363d', color: '#f0f6fc', borderRadius: '6px' }}
+                    value={addForm.course}
+                    onChange={e => setAddForm({ ...addForm, course: e.target.value })}
+                  >
+                    <option value="M.Tech Cyber Security">M.Tech Cyber Security</option>
+                    <option value="M.Sc Digital Forensics & Information Security">M.Sc Digital Forensics & Information Security</option>
+                    <option value="B.Tech - M.Tech Computer Science & Engineering (Cyber Security)">B.Tech - M.Tech (Cyber Security)</option>
+                    <option value="BBA">BBA</option>
+                    <option value="B.Tech">B.Tech</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div>
+                  <label style={{ fontSize: '0.8rem', color: '#8b949e', display: 'block', marginBottom: '0.2rem' }}>Game Prize Outcome</label>
+                  <select
+                    className="admin-input" style={{ width: '100%', padding: '0.5rem', background: '#161b22', border: '1px solid #30363d', color: '#f0f6fc', borderRadius: '6px' }}
+                    value={addForm.outcome}
+                    onChange={e => setAddForm({ ...addForm, outcome: e.target.value })}
+                  >
+                    <option value="Better Luck Next Time">Better Luck Next Time</option>
+                    <option value="One More Spin">One More Spin</option>
+                    <option value="Treasure Hunt Ticket">Treasure Hunt Ticket</option>
+                    <option value="Mobile Phone">Mobile Phone</option>
+                  </select>
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '0.5rem', marginTop: '0.5rem' }}>
+                  <button type="button" onClick={() => setShowAddModal(false)} style={{ padding: '0.5rem 1rem', background: '#21262d', border: '1px solid #30363d', color: '#c9d1d9', borderRadius: '6px', cursor: 'pointer' }}>Cancel</button>
+                  <button type="submit" style={{ padding: '0.5rem 1rem', background: '#238636', border: '1px solid #2ea043', color: '#fff', borderRadius: '6px', cursor: 'pointer', fontWeight: 600 }}>Save to Database</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        )}
 
         {msg && (
           <div style={{

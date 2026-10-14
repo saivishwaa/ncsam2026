@@ -264,4 +264,108 @@ router.post('/purge', requireAdminAuth, (req, res) => {
   }
 });
 
+// Manually Add / Recover Single Participant
+router.post('/add-participant', requireAdminAuth, (req, res) => {
+  const { fullName, email, course, outcome, locationOptedIn } = req.body || {};
+  if (!fullName || !email) {
+    return res.status(400).json({ error: 'Full name and email are required.' });
+  }
+
+  const cleanEmail = String(email).trim().toLowerCase();
+  const db = getDb();
+
+  try {
+    const existing = db.prepare('SELECT registration_id FROM registrations WHERE email = ?').get(cleanEmail);
+    if (existing) {
+      return res.status(409).json({ error: 'A record with this email already exists: ' + existing.registration_id });
+    }
+
+    const hex = crypto.randomBytes(4).toString('hex').toUpperCase();
+    const registrationId = `NFSU-2026-${hex}`;
+    const createdAt = new Date().toISOString();
+
+    db.exec('BEGIN TRANSACTION;');
+    const insReg = db.prepare(`
+      INSERT INTO registrations (registration_id, full_name, email, phone_number, course, created_at, ip_hash)
+      VALUES (?, ?, ?, ?, ?, ?, ?)
+    `);
+    insReg.run(registrationId, fullName.trim(), cleanEmail, cleanEmail, course || 'Other', createdAt, 'admin_manual');
+
+    if (locationOptedIn !== undefined && locationOptedIn !== null) {
+      const insLoc = db.prepare(`
+        INSERT INTO location_consents (registration_id, opted_in, latitude, longitude, accuracy, created_at)
+        VALUES (?, ?, ?, ?, ?, ?)
+      `);
+      insLoc.run(registrationId, locationOptedIn ? 1 : 0, locationOptedIn ? 23.216 : null, locationOptedIn ? 72.637 : null, 15, createdAt);
+    }
+
+    if (outcome) {
+      const insGame = db.prepare(`
+        INSERT INTO game_sessions (registration_id, outcome, segment_index, created_at, completed_at)
+        VALUES (?, ?, ?, ?, ?)
+      `);
+      insGame.run(registrationId, outcome, 1, createdAt, createdAt);
+    }
+
+    db.exec('COMMIT;');
+    logAudit('ADMIN_MANUAL_ADD_PARTICIPANT', { registrationId, fullName, cleanEmail });
+    console.log('[PERMANENT_REGISTRATION_RECORD]', JSON.stringify({ registrationId, fullName, email: cleanEmail, course: course || 'Other', createdAt, source: 'admin_manual' }));
+
+    return res.status(201).json({
+      success: true,
+      message: 'Participant record created successfully.',
+      registrationId
+    });
+  } catch (err) {
+    try { getDb().exec('ROLLBACK;'); } catch (_) {}
+    console.error('[ADMIN ADD PARTICIPANT ERROR]', err);
+    return res.status(500).json({ error: 'Failed to add participant: ' + err.message });
+  }
+});
+
+// Bulk Import / Restore Records
+router.post('/import-records', requireAdminAuth, (req, res) => {
+  const records = req.body?.records;
+  if (!Array.isArray(records) || records.length === 0) {
+    return res.status(400).json({ error: 'Array of records is required.' });
+  }
+
+  try {
+    const db = getDb();
+    db.exec('BEGIN TRANSACTION;');
+    const insReg = db.prepare(`
+      INSERT OR IGNORE INTO registrations (registration_id, full_name, email, phone_number, course, created_at, ip_hash)
+      VALUES (?, ?, ?, ?, ?, ?, ?)
+    `);
+    const insLoc = db.prepare(`
+      INSERT OR IGNORE INTO location_consents (registration_id, opted_in, latitude, longitude, accuracy, created_at)
+      VALUES (?, ?, ?, ?, ?, ?)
+    `);
+    const insGame = db.prepare(`
+      INSERT OR IGNORE INTO game_sessions (registration_id, outcome, segment_index, created_at, completed_at)
+      VALUES (?, ?, ?, ?, ?)
+    `);
+
+    let imported = 0;
+    for (const r of records) {
+      if (!r.registration_id || !r.full_name) continue;
+      const cleanEmail = (r.email || r.phone_number || '').trim().toLowerCase();
+      insReg.run(r.registration_id, r.full_name, cleanEmail, cleanEmail, r.course || 'Other', r.created_at || new Date().toISOString(), 'admin_imported');
+      if (r.location_opted_in !== undefined && r.location_opted_in !== null) {
+        insLoc.run(r.registration_id, r.location_opted_in ? 1 : 0, r.latitude || null, r.longitude || null, 15, r.created_at || new Date().toISOString());
+      }
+      if (r.outcome) {
+        insGame.run(r.registration_id, r.outcome, r.segment_index || 1, r.created_at || new Date().toISOString(), r.created_at || new Date().toISOString());
+      }
+      imported++;
+    }
+    db.exec('COMMIT;');
+    logAudit('ADMIN_MANUAL_IMPORT', { importedCount: imported });
+    return res.json({ success: true, message: `Successfully imported ${imported} records.`, importedCount: imported });
+  } catch (err) {
+    try { getDb().exec('ROLLBACK;'); } catch (_) {}
+    return res.status(500).json({ error: 'Import failed: ' + err.message });
+  }
+});
+
 export default router;
