@@ -94,6 +94,24 @@ router.post(
         ipHash
       }));
 
+      // Cloud Mirror (Google Sheets / Formspree / Webhook) - Asynchronous zero-loss mirror
+      const mirrorUrl = process.env.CLOUD_BACKUP_WEBHOOK_URL || process.env.FORMSPREE_URL;
+      if (mirrorUrl) {
+        fetch(mirrorUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            event: 'REGISTRATION',
+            registrationId,
+            fullName,
+            email: cleanEmail,
+            course,
+            createdAt
+          }),
+          signal: AbortSignal.timeout(5000)
+        }).catch(err => console.warn('[CLOUD MIRROR WARNING]', err.message));
+      }
+
       return res.status(201).json({
         success: true,
         message: 'Registration successful',
