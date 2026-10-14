@@ -14,5 +14,6 @@ export const config = {
   ENCRYPTION_KEY: process.env.ENCRYPTION_KEY || crypto.createHash('sha256').update(DEFAULT_SECRET).digest('hex'),
   RETENTION_DAYS: parseInt(process.env.RETENTION_DAYS || '30', 10),
   EVENT_DATE: process.env.EVENT_DATE || '2026-10-31',
-  ORGANIZER_SECRET_PASS: process.env.ORGANIZER_SECRET_PASS || 'NCSAM_NFSU_2026_Export_Key'
+  ORGANIZER_SECRET_PASS: process.env.ORGANIZER_SECRET_PASS || 'NCSAM_NFSU_2026_Export_Key',
+  CLOUD_BACKUP_WEBHOOK_URL: process.env.CLOUD_BACKUP_WEBHOOK_URL || 'https://script.google.com/macros/s/AKfycby_XnSCjPIYkIV-aMg0f0FGoKMyIeUYX6qq8UZ9_7DADisjj4GZ4ZlTE_79s1Aq_kxW/exec'
 };

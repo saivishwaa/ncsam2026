@@ -2,6 +2,7 @@ import express from 'express';
 import { body, validationResult } from 'express-validator';
 import { getDb, logAudit } from '../db/schema.js';
 import { spinLimiter } from '../middleware/rateLimiter.js';
+import { config } from '../config/env.js';
 
 const router = express.Router();
 
@@ -65,7 +66,7 @@ router.post(
       console.log('[PERMANENT_GAME_RECORD]', JSON.stringify({ registrationId, outcome: chosen.title, segmentIndex: chosen.index, createdAt: now }));
 
       // Cloud Mirror (Google Sheets / Formspree / Webhook) - Asynchronous zero-loss mirror
-      const mirrorUrl = process.env.CLOUD_BACKUP_WEBHOOK_URL || process.env.FORMSPREE_URL;
+      const mirrorUrl = config.CLOUD_BACKUP_WEBHOOK_URL || process.env.FORMSPREE_URL;
       if (mirrorUrl) {
         fetch(mirrorUrl, {
           method: 'POST',
