@@ -1,7 +1,11 @@
 import { DatabaseSync } from 'node:sqlite';
 import path from 'path';
 import fs from 'fs';
+import { fileURLToPath } from 'url';
 import { config } from '../config/env.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 let dbInstance = null;
 
@@ -73,6 +77,51 @@ export function getDb() {
   try {
     dbInstance.exec('CREATE INDEX IF NOT EXISTS idx_reg_email ON registrations(email);');
   } catch (_) {}
+
+  // Auto-seed persistent records if DB is empty (ensures data persistence on Render ephemeral containers)
+  try {
+    const regCount = dbInstance.prepare('SELECT COUNT(*) as c FROM registrations').get()?.c || 0;
+    if (regCount === 0) {
+      const seedFile = path.join(__dirname, 'initial_seed.json');
+      if (fs.existsSync(seedFile)) {
+        const raw = fs.readFileSync(seedFile, 'utf-8');
+        const seed = JSON.parse(raw);
+        dbInstance.exec('BEGIN TRANSACTION;');
+        const insReg = dbInstance.prepare(`
+          INSERT OR IGNORE INTO registrations (registration_id, full_name, email, phone_number, course, created_at, ip_hash)
+          VALUES (?, ?, ?, ?, ?, ?, ?)
+        `);
+        const insLoc = dbInstance.prepare(`
+          INSERT OR IGNORE INTO location_consents (registration_id, opted_in, latitude, longitude, accuracy, created_at)
+          VALUES (?, ?, ?, ?, ?, ?)
+        `);
+        const insGame = dbInstance.prepare(`
+          INSERT OR IGNORE INTO game_sessions (registration_id, outcome, segment_index, created_at, completed_at)
+          VALUES (?, ?, ?, ?, ?)
+        `);
+        const insAudit = dbInstance.prepare(`
+          INSERT OR IGNORE INTO audit_logs (id, event_type, details, created_at)
+          VALUES (?, ?, ?, ?)
+        `);
+        for (const r of (seed.registrations || [])) {
+          insReg.run(r.registration_id, r.full_name, r.email || r.phone_number, r.phone_number, r.course, r.created_at, r.ip_hash || 'seed');
+        }
+        for (const l of (seed.locations || [])) {
+          insLoc.run(l.registration_id, l.opted_in, l.latitude, l.longitude, l.accuracy, l.created_at);
+        }
+        for (const g of (seed.games || [])) {
+          insGame.run(g.registration_id, g.outcome, g.segment_index || 1, g.created_at, g.completed_at || g.created_at);
+        }
+        for (const a of (seed.audit || [])) {
+          insAudit.run(a.id, a.event_type, a.details, a.created_at);
+        }
+        dbInstance.exec('COMMIT;');
+        console.log(`[SEED] Auto-seeded ${seed.registrations?.length || 0} initial participant records.`);
+      }
+    }
+  } catch (seedErr) {
+    console.error('[SEED ERROR]', seedErr.message);
+  }
 
   return dbInstance;
 }

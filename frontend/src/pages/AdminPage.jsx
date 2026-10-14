@@ -67,7 +67,10 @@ export default function AdminPage({ onBack }) {
         setTotal(pd.total || 0);
         setPg(page);
       }
-    } catch (_) {}
+    } catch (err) {
+      setMsg('Failed to load participants: ' + err.message);
+      setMsgType('error');
+    }
     setLoading(false);
   };
 
@@ -92,7 +95,14 @@ export default function AdminPage({ onBack }) {
   };
 
   const purge = async () => {
-    if (!window.confirm('Delete all participant records permanently? This cannot be undone.')) return;
+    const confirmation = window.prompt('DANGER: This will permanently purge ALL participant records.\nTo confirm this action, type "PURGE":');
+    if (confirmation !== 'PURGE') {
+      if (confirmation !== null) {
+        setMsg('Purge cancelled. Type "PURGE" exactly to confirm.');
+        setMsgType('info');
+      }
+      return;
+    }
     try {
       const res = await adminFetch('/purge', {
         method: 'POST',

@@ -42,16 +42,17 @@ const app = express();
 // Security Hardening: Disable Express fingerprinting header
 app.disable('x-powered-by');
 
-// Global Rate Limiter to prevent DoS attacks across all endpoints
-const globalLimiter = rateLimit({
+// Trust reverse proxy (Render, Cloudflare, AWS) so req.ip and rate limiters work accurately per user
+app.set('trust proxy', 1);
+
+// Public API Rate Limiter to prevent DoS attacks while avoiding false positives
+const apiLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
-  max: 120,
+  max: 600,
   standardHeaders: true,
   legacyHeaders: false,
-  message: { error: 'Too many requests from this IP. Please try again later.', code: 'GLOBAL_RATE_LIMIT_EXCEEDED' }
+  message: { error: 'Too many requests from this IP. Please try again later.', code: 'API_RATE_LIMIT_EXCEEDED' }
 });
-
-app.use(globalLimiter);
 
 // Body parsing with strict size limits
 app.use(express.json({ limit: '10kb' }));
@@ -90,7 +91,8 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-// Public API Routes (CSRF verified)
+// Public API Routes (CSRF verified, Rate Limited)
+app.use('/api', apiLimiter);
 app.use('/api', verifyCsrf, registrationRoutes);
 app.use('/api', verifyCsrf, locationRoutes);
 app.use('/api', verifyCsrf, gameRoutes);

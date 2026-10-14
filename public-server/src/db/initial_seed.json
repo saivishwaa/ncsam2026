@@ -1,0 +1,1777 @@
+{
+  "registrations": [
+    {
+      "id": 42,
+      "registration_id": "NFSU-2026-0AB3A000",
+      "full_name": "Sai Vishwaa Student",
+      "phone_number": "9865063916",
+      "course": "M.Tech Cyber Security",
+      "created_at": "2026-10-10T19:18:06.689Z",
+      "ip_hash": "85e3d9d915c1c1ac",
+      "email": "9865063916"
+    },
+    {
+      "id": 43,
+      "registration_id": "NFSU-2026-36F624AD",
+      "full_name": "sai",
+      "phone_number": "8015351311",
+      "course": "btech",
+      "created_at": "2026-10-10T19:21:15.327Z",
+      "ip_hash": "8cf1cb42404d6f91",
+      "email": "8015351311"
+    },
+    {
+      "id": 44,
+      "registration_id": "NFSU-2026-908E3F7F",
+      "full_name": "Participant 908E3F7F",
+      "phone_number": "nfsu-2026-908e3f7f@nfsu.ac.in",
+      "course": "M.Tech Cyber Security",
+      "created_at": "2026-10-10T19:47:48.842Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-908e3f7f@nfsu.ac.in"
+    },
+    {
+      "id": 45,
+      "registration_id": "NFSU-2026-A30B14F5",
+      "full_name": "Participant A30B14F5",
+      "phone_number": "nfsu-2026-a30b14f5@nfsu.ac.in",
+      "course": "M.Tech Cyber Security",
+      "created_at": "2026-10-10T19:48:36.317Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-a30b14f5@nfsu.ac.in"
+    },
+    {
+      "id": 46,
+      "registration_id": "NFSU-2026-598BA4BE",
+      "full_name": "Participant 598BA4BE",
+      "phone_number": "nfsu-2026-598ba4be@nfsu.ac.in",
+      "course": "M.Tech Cyber Security",
+      "created_at": "2026-10-10T19:49:09.401Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-598ba4be@nfsu.ac.in"
+    },
+    {
+      "id": 47,
+      "registration_id": "NFSU-2026-315F3224",
+      "full_name": "Participant 315F3224",
+      "phone_number": "nfsu-2026-315f3224@nfsu.ac.in",
+      "course": "btech",
+      "created_at": "2026-10-10T19:51:15.410Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-315f3224@nfsu.ac.in"
+    },
+    {
+      "id": 48,
+      "registration_id": "NFSU-2026-AD93C311",
+      "full_name": "Participant AD93C311",
+      "phone_number": "nfsu-2026-ad93c311@nfsu.ac.in",
+      "course": "btech",
+      "created_at": "2026-10-10T19:53:29.459Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-ad93c311@nfsu.ac.in"
+    },
+    {
+      "id": 49,
+      "registration_id": "NFSU-2026-9473B4A0",
+      "full_name": "Participant 9473B4A0",
+      "phone_number": "nfsu-2026-9473b4a0@nfsu.ac.in",
+      "course": "btech",
+      "created_at": "2026-10-10T19:59:45.150Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-9473b4a0@nfsu.ac.in"
+    },
+    {
+      "id": 50,
+      "registration_id": "NFSU-2026-FE4B3885",
+      "full_name": "Participant FE4B3885",
+      "phone_number": "nfsu-2026-fe4b3885@nfsu.ac.in",
+      "course": "M.Tech Cyber Security",
+      "created_at": "2026-10-10T20:02:49.227Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-fe4b3885@nfsu.ac.in"
+    },
+    {
+      "id": 51,
+      "registration_id": "NFSU-2026-38F6580C",
+      "full_name": "Participant 38F6580C",
+      "phone_number": "nfsu-2026-38f6580c@nfsu.ac.in",
+      "course": "btech",
+      "created_at": "2026-10-10T20:04:52.480Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-38f6580c@nfsu.ac.in"
+    },
+    {
+      "id": 52,
+      "registration_id": "NFSU-2026-7EED7867",
+      "full_name": "Participant 7EED7867",
+      "phone_number": "nfsu-2026-7eed7867@nfsu.ac.in",
+      "course": "btech",
+      "created_at": "2026-10-10T20:09:30.780Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-7eed7867@nfsu.ac.in"
+    },
+    {
+      "id": 53,
+      "registration_id": "NFSU-2026-2880A2E7",
+      "full_name": "Participant 2880A2E7",
+      "phone_number": "nfsu-2026-2880a2e7@nfsu.ac.in",
+      "course": "M.Tech Cyber Security",
+      "created_at": "2026-10-10T20:15:54.974Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-2880a2e7@nfsu.ac.in"
+    },
+    {
+      "id": 54,
+      "registration_id": "NFSU-2026-A7B41689",
+      "full_name": "Participant A7B41689",
+      "phone_number": "nfsu-2026-a7b41689@nfsu.ac.in",
+      "course": "M.Tech Cyber Security",
+      "created_at": "2026-10-10T20:16:22.078Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-a7b41689@nfsu.ac.in"
+    },
+    {
+      "id": 55,
+      "registration_id": "NFSU-2026-2076E63C",
+      "full_name": "Participant 2076E63C",
+      "phone_number": "nfsu-2026-2076e63c@nfsu.ac.in",
+      "course": "btech",
+      "created_at": "2026-10-10T20:18:41.802Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-2076e63c@nfsu.ac.in"
+    },
+    {
+      "id": 56,
+      "registration_id": "NFSU-2026-CE5A5BE1",
+      "full_name": "Participant CE5A5BE1",
+      "phone_number": "nfsu-2026-ce5a5be1@nfsu.ac.in",
+      "course": "M.Tech Cyber Security",
+      "created_at": "2026-10-10T20:21:12.709Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-ce5a5be1@nfsu.ac.in"
+    },
+    {
+      "id": 57,
+      "registration_id": "NFSU-2026-CC961CB4",
+      "full_name": "Participant CC961CB4",
+      "phone_number": "nfsu-2026-cc961cb4@nfsu.ac.in",
+      "course": "M.Tech Cyber Security",
+      "created_at": "2026-10-10T20:21:38.858Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-cc961cb4@nfsu.ac.in"
+    },
+    {
+      "id": 58,
+      "registration_id": "NFSU-2026-59847493",
+      "full_name": "Participant 59847493",
+      "phone_number": "nfsu-2026-59847493@nfsu.ac.in",
+      "course": "btech",
+      "created_at": "2026-10-10T20:22:46.459Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-59847493@nfsu.ac.in"
+    },
+    {
+      "id": 59,
+      "registration_id": "NFSU-2026-3D39ED71",
+      "full_name": "Participant 3D39ED71",
+      "phone_number": "nfsu-2026-3d39ed71@nfsu.ac.in",
+      "course": "M.Tech Cyber Security",
+      "created_at": "2026-10-10T20:28:37.768Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-3d39ed71@nfsu.ac.in"
+    },
+    {
+      "id": 60,
+      "registration_id": "NFSU-2026-E1865E04",
+      "full_name": "Participant E1865E04",
+      "phone_number": "nfsu-2026-e1865e04@nfsu.ac.in",
+      "course": "M.Tech Cyber Security",
+      "created_at": "2026-10-10T20:30:42.019Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-e1865e04@nfsu.ac.in"
+    },
+    {
+      "id": 61,
+      "registration_id": "NFSU-2026-B69FEEFD",
+      "full_name": "Participant B69FEEFD",
+      "phone_number": "nfsu-2026-b69feefd@nfsu.ac.in",
+      "course": "btech",
+      "created_at": "2026-10-10T20:34:05.017Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-b69feefd@nfsu.ac.in"
+    },
+    {
+      "id": 62,
+      "registration_id": "NFSU-2026-DA10065A",
+      "full_name": "Participant DA10065A",
+      "phone_number": "nfsu-2026-da10065a@nfsu.ac.in",
+      "course": "btech",
+      "created_at": "2026-10-10T20:35:35.733Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-da10065a@nfsu.ac.in"
+    },
+    {
+      "id": 63,
+      "registration_id": "NFSU-2026-6AD6FC0F",
+      "full_name": "Participant 6AD6FC0F",
+      "phone_number": "nfsu-2026-6ad6fc0f@nfsu.ac.in",
+      "course": "btech",
+      "created_at": "2026-10-10T20:36:17.876Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-6ad6fc0f@nfsu.ac.in"
+    },
+    {
+      "id": 64,
+      "registration_id": "NFSU-2026-90028DC6",
+      "full_name": "Participant 90028DC6",
+      "phone_number": "nfsu-2026-90028dc6@nfsu.ac.in",
+      "course": "M.Tech Cyber Security",
+      "created_at": "2026-10-10T20:39:16.878Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-90028dc6@nfsu.ac.in"
+    },
+    {
+      "id": 65,
+      "registration_id": "NFSU-2026-497C5068",
+      "full_name": "Participant 497C5068",
+      "phone_number": "nfsu-2026-497c5068@nfsu.ac.in",
+      "course": "btech",
+      "created_at": "2026-10-10T20:39:47.336Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-497c5068@nfsu.ac.in"
+    },
+    {
+      "id": 66,
+      "registration_id": "NFSU-2026-1E69E006",
+      "full_name": "Participant 1E69E006",
+      "phone_number": "nfsu-2026-1e69e006@nfsu.ac.in",
+      "course": "btech",
+      "created_at": "2026-10-10T20:41:25.603Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-1e69e006@nfsu.ac.in"
+    },
+    {
+      "id": 67,
+      "registration_id": "NFSU-2026-472D0D88",
+      "full_name": "Participant 472D0D88",
+      "phone_number": "nfsu-2026-472d0d88@nfsu.ac.in",
+      "course": "M.Tech Cyber Security",
+      "created_at": "2026-10-10T20:44:53.409Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-472d0d88@nfsu.ac.in"
+    },
+    {
+      "id": 68,
+      "registration_id": "NFSU-2026-C3BF822F",
+      "full_name": "Participant C3BF822F",
+      "phone_number": "nfsu-2026-c3bf822f@nfsu.ac.in",
+      "course": "btech",
+      "created_at": "2026-10-10T20:46:11.428Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-c3bf822f@nfsu.ac.in"
+    },
+    {
+      "id": 69,
+      "registration_id": "NFSU-2026-37398B86",
+      "full_name": "Participant 37398B86",
+      "phone_number": "nfsu-2026-37398b86@nfsu.ac.in",
+      "course": "nhhjghjg",
+      "created_at": "2026-10-13T11:42:10.399Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-37398b86@nfsu.ac.in"
+    },
+    {
+      "id": 70,
+      "registration_id": "NFSU-2026-714DC5C8",
+      "full_name": "Participant 714DC5C8",
+      "phone_number": "nfsu-2026-714dc5c8@nfsu.ac.in",
+      "course": "btech",
+      "created_at": "2026-10-13T11:48:24.990Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-714dc5c8@nfsu.ac.in"
+    },
+    {
+      "id": 71,
+      "registration_id": "NFSU-2026-7E2A573D",
+      "full_name": "Participant 7E2A573D",
+      "phone_number": "nfsu-2026-7e2a573d@nfsu.ac.in",
+      "course": "M.Tech Cyber Security",
+      "created_at": "2026-10-13T11:59:20.430Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-7e2a573d@nfsu.ac.in"
+    },
+    {
+      "id": 72,
+      "registration_id": "NFSU-2026-8C2BDC90",
+      "full_name": "Participant 8C2BDC90",
+      "phone_number": "nfsu-2026-8c2bdc90@nfsu.ac.in",
+      "course": "M.Tech Cyber Security",
+      "created_at": "2026-10-13T12:04:34.331Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-8c2bdc90@nfsu.ac.in"
+    },
+    {
+      "id": 73,
+      "registration_id": "NFSU-2026-47EA0A00",
+      "full_name": "Participant 47EA0A00",
+      "phone_number": "nfsu-2026-47ea0a00@nfsu.ac.in",
+      "course": "btech]",
+      "created_at": "2026-10-13T12:07:53.183Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-47ea0a00@nfsu.ac.in"
+    },
+    {
+      "id": 74,
+      "registration_id": "NFSU-2026-E8FD0E06",
+      "full_name": "Participant E8FD0E06",
+      "phone_number": "nfsu-2026-e8fd0e06@nfsu.ac.in",
+      "course": "M.Tech Cyber Security",
+      "created_at": "2026-10-13T12:18:42.397Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-e8fd0e06@nfsu.ac.in"
+    },
+    {
+      "id": 75,
+      "registration_id": "NFSU-2026-18BF1612",
+      "full_name": "Participant 18BF1612",
+      "phone_number": "nfsu-2026-18bf1612@nfsu.ac.in",
+      "course": "M.Tech Cyber Security",
+      "created_at": "2026-10-13T12:20:00.578Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-18bf1612@nfsu.ac.in"
+    },
+    {
+      "id": 76,
+      "registration_id": "NFSU-2026-9146C974",
+      "full_name": "Participant 9146C974",
+      "phone_number": "nfsu-2026-9146c974@nfsu.ac.in",
+      "course": "M.Tech Cyber Security",
+      "created_at": "2026-10-13T12:20:12.658Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-9146c974@nfsu.ac.in"
+    },
+    {
+      "id": 77,
+      "registration_id": "NFSU-2026-67C9402F",
+      "full_name": "Participant 67C9402F",
+      "phone_number": "nfsu-2026-67c9402f@nfsu.ac.in",
+      "course": "btech",
+      "created_at": "2026-10-13T12:20:49.038Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-67c9402f@nfsu.ac.in"
+    },
+    {
+      "id": 78,
+      "registration_id": "NFSU-2026-287F70DF",
+      "full_name": "Participant 287F70DF",
+      "phone_number": "nfsu-2026-287f70df@nfsu.ac.in",
+      "course": "M.Tech Cyber Security",
+      "created_at": "2026-10-13T16:00:56.763Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-287f70df@nfsu.ac.in"
+    },
+    {
+      "id": 79,
+      "registration_id": "NFSU-2026-B94DDF17",
+      "full_name": "Participant B94DDF17",
+      "phone_number": "nfsu-2026-b94ddf17@nfsu.ac.in",
+      "course": "M.Tech Cyber Security",
+      "created_at": "2026-10-13T16:22:22.166Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-b94ddf17@nfsu.ac.in"
+    },
+    {
+      "id": 80,
+      "registration_id": "NFSU-2026-B6F73958",
+      "full_name": "Participant B6F73958",
+      "phone_number": "nfsu-2026-b6f73958@nfsu.ac.in",
+      "course": "M.Tech Cyber Security",
+      "created_at": "2026-10-13T16:25:48.546Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-b6f73958@nfsu.ac.in"
+    },
+    {
+      "id": 81,
+      "registration_id": "NFSU-2026-357E3DE9",
+      "full_name": "Participant 357E3DE9",
+      "phone_number": "nfsu-2026-357e3de9@nfsu.ac.in",
+      "course": "M.Tech Cyber Security",
+      "created_at": "2026-10-13T16:34:38.023Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-357e3de9@nfsu.ac.in"
+    },
+    {
+      "id": 82,
+      "registration_id": "NFSU-2026-10463393",
+      "full_name": "Participant 10463393",
+      "phone_number": "nfsu-2026-10463393@nfsu.ac.in",
+      "course": "M.Tech Cyber Security",
+      "created_at": "2026-10-13T16:37:37.470Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-10463393@nfsu.ac.in"
+    },
+    {
+      "id": 83,
+      "registration_id": "NFSU-2026-B328DDA1",
+      "full_name": "Participant B328DDA1",
+      "phone_number": "nfsu-2026-b328dda1@nfsu.ac.in",
+      "course": "M.Tech Cyber Security",
+      "created_at": "2026-10-13T16:44:42.918Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-b328dda1@nfsu.ac.in"
+    },
+    {
+      "id": 84,
+      "registration_id": "NFSU-2026-E7A344A3",
+      "full_name": "Participant E7A344A3",
+      "phone_number": "nfsu-2026-e7a344a3@nfsu.ac.in",
+      "course": "M.Tech Cyber Security",
+      "created_at": "2026-10-13T16:47:03.711Z",
+      "ip_hash": "audit_restored",
+      "email": "nfsu-2026-e7a344a3@nfsu.ac.in"
+    }
+  ],
+  "locations": [
+    {
+      "id": 36,
+      "registration_id": "NFSU-2026-0AB3A000",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 12.5,
+      "created_at": "2026-10-10T19:18:06.689Z"
+    },
+    {
+      "id": 37,
+      "registration_id": "NFSU-2026-36F624AD",
+      "opted_in": 0,
+      "latitude": null,
+      "longitude": null,
+      "accuracy": null,
+      "created_at": "2026-10-10T19:21:15.327Z"
+    },
+    {
+      "id": 38,
+      "registration_id": "NFSU-2026-908E3F7F",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T19:47:48.842Z"
+    },
+    {
+      "id": 39,
+      "registration_id": "NFSU-2026-A30B14F5",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T19:48:36.317Z"
+    },
+    {
+      "id": 40,
+      "registration_id": "NFSU-2026-598BA4BE",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T19:49:09.401Z"
+    },
+    {
+      "id": 41,
+      "registration_id": "NFSU-2026-FE4B3885",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:02:49.227Z"
+    },
+    {
+      "id": 42,
+      "registration_id": "NFSU-2026-38F6580C",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:04:52.480Z"
+    },
+    {
+      "id": 43,
+      "registration_id": "NFSU-2026-7EED7867",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:09:30.780Z"
+    },
+    {
+      "id": 44,
+      "registration_id": "NFSU-2026-2880A2E7",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:15:54.974Z"
+    },
+    {
+      "id": 45,
+      "registration_id": "NFSU-2026-A7B41689",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:16:22.078Z"
+    },
+    {
+      "id": 46,
+      "registration_id": "NFSU-2026-2076E63C",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:18:41.802Z"
+    },
+    {
+      "id": 47,
+      "registration_id": "NFSU-2026-CE5A5BE1",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:21:12.709Z"
+    },
+    {
+      "id": 48,
+      "registration_id": "NFSU-2026-59847493",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:22:46.459Z"
+    },
+    {
+      "id": 49,
+      "registration_id": "NFSU-2026-3D39ED71",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:28:37.768Z"
+    },
+    {
+      "id": 50,
+      "registration_id": "NFSU-2026-E1865E04",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:30:42.019Z"
+    },
+    {
+      "id": 51,
+      "registration_id": "NFSU-2026-B69FEEFD",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:34:05.017Z"
+    },
+    {
+      "id": 52,
+      "registration_id": "NFSU-2026-DA10065A",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:35:35.733Z"
+    },
+    {
+      "id": 53,
+      "registration_id": "NFSU-2026-6AD6FC0F",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:36:17.876Z"
+    },
+    {
+      "id": 54,
+      "registration_id": "NFSU-2026-90028DC6",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:39:16.878Z"
+    },
+    {
+      "id": 55,
+      "registration_id": "NFSU-2026-497C5068",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:39:47.336Z"
+    },
+    {
+      "id": 56,
+      "registration_id": "NFSU-2026-1E69E006",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:41:25.603Z"
+    },
+    {
+      "id": 57,
+      "registration_id": "NFSU-2026-472D0D88",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:44:53.409Z"
+    },
+    {
+      "id": 58,
+      "registration_id": "NFSU-2026-C3BF822F",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-10T20:46:11.428Z"
+    },
+    {
+      "id": 59,
+      "registration_id": "NFSU-2026-37398B86",
+      "opted_in": 0,
+      "latitude": null,
+      "longitude": null,
+      "accuracy": null,
+      "created_at": "2026-10-13T11:42:10.399Z"
+    },
+    {
+      "id": 60,
+      "registration_id": "NFSU-2026-714DC5C8",
+      "opted_in": 0,
+      "latitude": null,
+      "longitude": null,
+      "accuracy": null,
+      "created_at": "2026-10-13T11:48:24.990Z"
+    },
+    {
+      "id": 61,
+      "registration_id": "NFSU-2026-7E2A573D",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-13T11:59:20.430Z"
+    },
+    {
+      "id": 62,
+      "registration_id": "NFSU-2026-47EA0A00",
+      "opted_in": 0,
+      "latitude": null,
+      "longitude": null,
+      "accuracy": null,
+      "created_at": "2026-10-13T12:07:53.183Z"
+    },
+    {
+      "id": 63,
+      "registration_id": "NFSU-2026-E8FD0E06",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-13T12:18:42.397Z"
+    },
+    {
+      "id": 64,
+      "registration_id": "NFSU-2026-9146C974",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-13T12:20:12.658Z"
+    },
+    {
+      "id": 65,
+      "registration_id": "NFSU-2026-67C9402F",
+      "opted_in": 0,
+      "latitude": null,
+      "longitude": null,
+      "accuracy": null,
+      "created_at": "2026-10-13T12:20:49.038Z"
+    },
+    {
+      "id": 66,
+      "registration_id": "NFSU-2026-287F70DF",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-13T16:00:56.763Z"
+    },
+    {
+      "id": 67,
+      "registration_id": "NFSU-2026-B94DDF17",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-13T16:22:22.166Z"
+    },
+    {
+      "id": 68,
+      "registration_id": "NFSU-2026-B6F73958",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-13T16:25:48.546Z"
+    },
+    {
+      "id": 69,
+      "registration_id": "NFSU-2026-357E3DE9",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-13T16:34:38.023Z"
+    },
+    {
+      "id": 70,
+      "registration_id": "NFSU-2026-10463393",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-13T16:37:37.470Z"
+    },
+    {
+      "id": 71,
+      "registration_id": "NFSU-2026-B328DDA1",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-13T16:44:42.918Z"
+    },
+    {
+      "id": 72,
+      "registration_id": "NFSU-2026-E7A344A3",
+      "opted_in": 1,
+      "latitude": 23.216,
+      "longitude": 72.637,
+      "accuracy": 15,
+      "created_at": "2026-10-13T16:47:03.711Z"
+    }
+  ],
+  "games": [
+    {
+      "id": 39,
+      "registration_id": "NFSU-2026-0AB3A000",
+      "outcome": "Treasure Hunt Ticket — Simulated Prize",
+      "segment_index": 1,
+      "created_at": "2026-10-10T19:18:06.689Z",
+      "completed_at": "2026-10-10T19:18:06.689Z"
+    },
+    {
+      "id": 40,
+      "registration_id": "NFSU-2026-36F624AD",
+      "outcome": "Better Luck Next Time",
+      "segment_index": 2,
+      "created_at": "2026-10-10T19:21:15.327Z",
+      "completed_at": "2026-10-10T19:21:15.327Z"
+    },
+    {
+      "id": 41,
+      "registration_id": "NFSU-2026-908E3F7F",
+      "outcome": "Better Luck Next Time",
+      "segment_index": 1,
+      "created_at": "2026-10-10T19:47:48.842Z",
+      "completed_at": "2026-10-10T19:47:48.842Z"
+    },
+    {
+      "id": 42,
+      "registration_id": "NFSU-2026-A30B14F5",
+      "outcome": "Mobile Phone",
+      "segment_index": 1,
+      "created_at": "2026-10-10T19:48:36.317Z",
+      "completed_at": "2026-10-10T19:48:36.317Z"
+    },
+    {
+      "id": 43,
+      "registration_id": "NFSU-2026-598BA4BE",
+      "outcome": "Treasure Hunt Ticket",
+      "segment_index": 1,
+      "created_at": "2026-10-10T19:49:09.401Z",
+      "completed_at": "2026-10-10T19:49:09.401Z"
+    },
+    {
+      "id": 44,
+      "registration_id": "NFSU-2026-315F3224",
+      "outcome": "Better Luck Next Time",
+      "segment_index": 1,
+      "created_at": "2026-10-10T19:51:15.410Z",
+      "completed_at": "2026-10-10T19:51:15.410Z"
+    },
+    {
+      "id": 45,
+      "registration_id": "NFSU-2026-AD93C311",
+      "outcome": "Mobile Phone",
+      "segment_index": 1,
+      "created_at": "2026-10-10T19:53:29.459Z",
+      "completed_at": "2026-10-10T19:53:29.459Z"
+    },
+    {
+      "id": 46,
+      "registration_id": "NFSU-2026-9473B4A0",
+      "outcome": "Mobile Phone",
+      "segment_index": 1,
+      "created_at": "2026-10-10T19:59:45.150Z",
+      "completed_at": "2026-10-10T19:59:45.150Z"
+    },
+    {
+      "id": 47,
+      "registration_id": "NFSU-2026-FE4B3885",
+      "outcome": "One More Spin",
+      "segment_index": 1,
+      "created_at": "2026-10-10T20:02:49.227Z",
+      "completed_at": "2026-10-10T20:02:49.227Z"
+    },
+    {
+      "id": 48,
+      "registration_id": "NFSU-2026-38F6580C",
+      "outcome": "Better Luck Next Time",
+      "segment_index": 1,
+      "created_at": "2026-10-10T20:04:52.480Z",
+      "completed_at": "2026-10-10T20:04:52.480Z"
+    },
+    {
+      "id": 49,
+      "registration_id": "NFSU-2026-7EED7867",
+      "outcome": "Better Luck Next Time",
+      "segment_index": 1,
+      "created_at": "2026-10-10T20:09:30.780Z",
+      "completed_at": "2026-10-10T20:09:30.780Z"
+    },
+    {
+      "id": 50,
+      "registration_id": "NFSU-2026-2880A2E7",
+      "outcome": "Better Luck Next Time",
+      "segment_index": 1,
+      "created_at": "2026-10-10T20:15:54.974Z",
+      "completed_at": "2026-10-10T20:15:54.974Z"
+    },
+    {
+      "id": 51,
+      "registration_id": "NFSU-2026-A7B41689",
+      "outcome": "Treasure Hunt Ticket",
+      "segment_index": 1,
+      "created_at": "2026-10-10T20:16:22.078Z",
+      "completed_at": "2026-10-10T20:16:22.078Z"
+    },
+    {
+      "id": 52,
+      "registration_id": "NFSU-2026-2076E63C",
+      "outcome": "Better Luck Next Time",
+      "segment_index": 1,
+      "created_at": "2026-10-10T20:18:41.802Z",
+      "completed_at": "2026-10-10T20:18:41.802Z"
+    },
+    {
+      "id": 53,
+      "registration_id": "NFSU-2026-CE5A5BE1",
+      "outcome": "Better Luck Next Time",
+      "segment_index": 1,
+      "created_at": "2026-10-10T20:21:12.709Z",
+      "completed_at": "2026-10-10T20:21:12.709Z"
+    },
+    {
+      "id": 54,
+      "registration_id": "NFSU-2026-59847493",
+      "outcome": "One More Spin",
+      "segment_index": 1,
+      "created_at": "2026-10-10T20:22:46.459Z",
+      "completed_at": "2026-10-10T20:22:46.459Z"
+    },
+    {
+      "id": 55,
+      "registration_id": "NFSU-2026-3D39ED71",
+      "outcome": "Treasure Hunt Ticket",
+      "segment_index": 1,
+      "created_at": "2026-10-10T20:28:37.768Z",
+      "completed_at": "2026-10-10T20:28:37.768Z"
+    },
+    {
+      "id": 56,
+      "registration_id": "NFSU-2026-E1865E04",
+      "outcome": "Better Luck Next Time",
+      "segment_index": 1,
+      "created_at": "2026-10-10T20:30:42.019Z",
+      "completed_at": "2026-10-10T20:30:42.019Z"
+    },
+    {
+      "id": 57,
+      "registration_id": "NFSU-2026-B69FEEFD",
+      "outcome": "Better Luck Next Time",
+      "segment_index": 1,
+      "created_at": "2026-10-10T20:34:05.017Z",
+      "completed_at": "2026-10-10T20:34:05.017Z"
+    },
+    {
+      "id": 58,
+      "registration_id": "NFSU-2026-DA10065A",
+      "outcome": "Better Luck Next Time",
+      "segment_index": 1,
+      "created_at": "2026-10-10T20:35:35.733Z",
+      "completed_at": "2026-10-10T20:35:35.733Z"
+    },
+    {
+      "id": 59,
+      "registration_id": "NFSU-2026-6AD6FC0F",
+      "outcome": "Treasure Hunt Ticket",
+      "segment_index": 1,
+      "created_at": "2026-10-10T20:36:17.876Z",
+      "completed_at": "2026-10-10T20:36:17.876Z"
+    },
+    {
+      "id": 60,
+      "registration_id": "NFSU-2026-90028DC6",
+      "outcome": "Better Luck Next Time",
+      "segment_index": 1,
+      "created_at": "2026-10-10T20:39:16.878Z",
+      "completed_at": "2026-10-10T20:39:16.878Z"
+    },
+    {
+      "id": 61,
+      "registration_id": "NFSU-2026-497C5068",
+      "outcome": "One More Spin",
+      "segment_index": 1,
+      "created_at": "2026-10-10T20:39:47.336Z",
+      "completed_at": "2026-10-10T20:39:47.336Z"
+    },
+    {
+      "id": 62,
+      "registration_id": "NFSU-2026-1E69E006",
+      "outcome": "Better Luck Next Time",
+      "segment_index": 1,
+      "created_at": "2026-10-10T20:41:25.603Z",
+      "completed_at": "2026-10-10T20:41:25.603Z"
+    },
+    {
+      "id": 63,
+      "registration_id": "NFSU-2026-472D0D88",
+      "outcome": "Better Luck Next Time",
+      "segment_index": 1,
+      "created_at": "2026-10-10T20:44:53.409Z",
+      "completed_at": "2026-10-10T20:44:53.409Z"
+    },
+    {
+      "id": 64,
+      "registration_id": "NFSU-2026-C3BF822F",
+      "outcome": "Better Luck Next Time",
+      "segment_index": 1,
+      "created_at": "2026-10-10T20:46:11.428Z",
+      "completed_at": "2026-10-10T20:46:11.428Z"
+    },
+    {
+      "id": 65,
+      "registration_id": "NFSU-2026-37398B86",
+      "outcome": "One More Spin",
+      "segment_index": 1,
+      "created_at": "2026-10-13T11:42:10.399Z",
+      "completed_at": "2026-10-13T11:42:10.399Z"
+    },
+    {
+      "id": 66,
+      "registration_id": "NFSU-2026-714DC5C8",
+      "outcome": "Better Luck Next Time",
+      "segment_index": 1,
+      "created_at": "2026-10-13T11:48:24.990Z",
+      "completed_at": "2026-10-13T11:48:24.990Z"
+    },
+    {
+      "id": 67,
+      "registration_id": "NFSU-2026-7E2A573D",
+      "outcome": "Better Luck Next Time",
+      "segment_index": 1,
+      "created_at": "2026-10-13T11:59:20.430Z",
+      "completed_at": "2026-10-13T11:59:20.430Z"
+    },
+    {
+      "id": 68,
+      "registration_id": "NFSU-2026-47EA0A00",
+      "outcome": "Better Luck Next Time",
+      "segment_index": 1,
+      "created_at": "2026-10-13T12:07:53.183Z",
+      "completed_at": "2026-10-13T12:07:53.183Z"
+    },
+    {
+      "id": 69,
+      "registration_id": "NFSU-2026-E8FD0E06",
+      "outcome": "Better Luck Next Time",
+      "segment_index": 1,
+      "created_at": "2026-10-13T12:18:42.397Z",
+      "completed_at": "2026-10-13T12:18:42.397Z"
+    },
+    {
+      "id": 70,
+      "registration_id": "NFSU-2026-9146C974",
+      "outcome": "One More Spin",
+      "segment_index": 1,
+      "created_at": "2026-10-13T12:20:12.658Z",
+      "completed_at": "2026-10-13T12:20:12.658Z"
+    },
+    {
+      "id": 71,
+      "registration_id": "NFSU-2026-67C9402F",
+      "outcome": "One More Spin",
+      "segment_index": 1,
+      "created_at": "2026-10-13T12:20:49.038Z",
+      "completed_at": "2026-10-13T12:20:49.038Z"
+    },
+    {
+      "id": 72,
+      "registration_id": "NFSU-2026-287F70DF",
+      "outcome": "Mobile Phone",
+      "segment_index": 1,
+      "created_at": "2026-10-13T16:00:56.763Z",
+      "completed_at": "2026-10-13T16:00:56.763Z"
+    },
+    {
+      "id": 73,
+      "registration_id": "NFSU-2026-B94DDF17",
+      "outcome": "Better Luck Next Time",
+      "segment_index": 1,
+      "created_at": "2026-10-13T16:22:22.166Z",
+      "completed_at": "2026-10-13T16:22:22.166Z"
+    },
+    {
+      "id": 74,
+      "registration_id": "NFSU-2026-B6F73958",
+      "outcome": "Mobile Phone",
+      "segment_index": 1,
+      "created_at": "2026-10-13T16:25:48.546Z",
+      "completed_at": "2026-10-13T16:25:48.546Z"
+    },
+    {
+      "id": 75,
+      "registration_id": "NFSU-2026-357E3DE9",
+      "outcome": "Better Luck Next Time",
+      "segment_index": 1,
+      "created_at": "2026-10-13T16:34:38.023Z",
+      "completed_at": "2026-10-13T16:34:38.023Z"
+    },
+    {
+      "id": 76,
+      "registration_id": "NFSU-2026-10463393",
+      "outcome": "Better Luck Next Time",
+      "segment_index": 1,
+      "created_at": "2026-10-13T16:37:37.470Z",
+      "completed_at": "2026-10-13T16:37:37.470Z"
+    },
+    {
+      "id": 77,
+      "registration_id": "NFSU-2026-B328DDA1",
+      "outcome": "Better Luck Next Time",
+      "segment_index": 1,
+      "created_at": "2026-10-13T16:44:42.918Z",
+      "completed_at": "2026-10-13T16:44:42.918Z"
+    },
+    {
+      "id": 78,
+      "registration_id": "NFSU-2026-E7A344A3",
+      "outcome": "Better Luck Next Time",
+      "segment_index": 1,
+      "created_at": "2026-10-13T16:47:03.711Z",
+      "completed_at": "2026-10-13T16:47:03.711Z"
+    }
+  ],
+  "audit": [
+    {
+      "id": 1,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-908E3F7F\",\"course\":\"M.Tech Cyber Security\"}",
+      "created_at": "2026-10-10T19:47:48.842Z"
+    },
+    {
+      "id": 2,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-908E3F7F\",\"optedIn\":true}",
+      "created_at": "2026-10-10T19:47:48.860Z"
+    },
+    {
+      "id": 3,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-908E3F7F\",\"outcome\":\"Better Luck Next Time\"}",
+      "created_at": "2026-10-10T19:47:48.869Z"
+    },
+    {
+      "id": 4,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-A30B14F5\",\"course\":\"M.Tech Cyber Security\"}",
+      "created_at": "2026-10-10T19:48:36.317Z"
+    },
+    {
+      "id": 5,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-A30B14F5\",\"optedIn\":true}",
+      "created_at": "2026-10-10T19:48:36.335Z"
+    },
+    {
+      "id": 6,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-A30B14F5\",\"outcome\":\"Mobile Phone\"}",
+      "created_at": "2026-10-10T19:48:36.343Z"
+    },
+    {
+      "id": 7,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-598BA4BE\",\"course\":\"M.Tech Cyber Security\"}",
+      "created_at": "2026-10-10T19:49:09.401Z"
+    },
+    {
+      "id": 8,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-598BA4BE\",\"optedIn\":true}",
+      "created_at": "2026-10-10T19:49:09.418Z"
+    },
+    {
+      "id": 9,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-598BA4BE\",\"outcome\":\"Treasure Hunt Ticket\"}",
+      "created_at": "2026-10-10T19:49:09.426Z"
+    },
+    {
+      "id": 10,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-315F3224\",\"course\":\"btech\"}",
+      "created_at": "2026-10-10T19:51:15.410Z"
+    },
+    {
+      "id": 11,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-315F3224\",\"outcome\":\"Better Luck Next Time\"}",
+      "created_at": "2026-10-10T19:51:17.993Z"
+    },
+    {
+      "id": 12,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-AD93C311\",\"course\":\"btech\"}",
+      "created_at": "2026-10-10T19:53:29.459Z"
+    },
+    {
+      "id": 13,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-AD93C311\",\"outcome\":\"Mobile Phone\"}",
+      "created_at": "2026-10-10T19:53:40.331Z"
+    },
+    {
+      "id": 14,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-9473B4A0\",\"course\":\"btech\"}",
+      "created_at": "2026-10-10T19:59:45.150Z"
+    },
+    {
+      "id": 15,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-9473B4A0\",\"outcome\":\"Mobile Phone\"}",
+      "created_at": "2026-10-10T19:59:47.887Z"
+    },
+    {
+      "id": 16,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-FE4B3885\",\"course\":\"M.Tech Cyber Security\"}",
+      "created_at": "2026-10-10T20:02:49.227Z"
+    },
+    {
+      "id": 17,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-FE4B3885\",\"optedIn\":true}",
+      "created_at": "2026-10-10T20:02:49.241Z"
+    },
+    {
+      "id": 18,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-FE4B3885\",\"outcome\":\"One More Spin\"}",
+      "created_at": "2026-10-10T20:02:49.248Z"
+    },
+    {
+      "id": 19,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-38F6580C\",\"course\":\"btech\"}",
+      "created_at": "2026-10-10T20:04:52.480Z"
+    },
+    {
+      "id": 20,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-38F6580C\",\"optedIn\":true}",
+      "created_at": "2026-10-10T20:04:55.691Z"
+    },
+    {
+      "id": 21,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-38F6580C\",\"outcome\":\"Better Luck Next Time\"}",
+      "created_at": "2026-10-10T20:04:56.550Z"
+    },
+    {
+      "id": 22,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-7EED7867\",\"course\":\"btech\"}",
+      "created_at": "2026-10-10T20:09:30.780Z"
+    },
+    {
+      "id": 23,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-7EED7867\",\"outcome\":\"Better Luck Next Time\"}",
+      "created_at": "2026-10-10T20:09:32.293Z"
+    },
+    {
+      "id": 24,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-7EED7867\",\"optedIn\":true}",
+      "created_at": "2026-10-10T20:09:33.923Z"
+    },
+    {
+      "id": 25,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-2880A2E7\",\"course\":\"M.Tech Cyber Security\"}",
+      "created_at": "2026-10-10T20:15:54.974Z"
+    },
+    {
+      "id": 26,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-2880A2E7\",\"optedIn\":true}",
+      "created_at": "2026-10-10T20:15:54.990Z"
+    },
+    {
+      "id": 27,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-2880A2E7\",\"outcome\":\"Better Luck Next Time\"}",
+      "created_at": "2026-10-10T20:15:54.997Z"
+    },
+    {
+      "id": 28,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-A7B41689\",\"course\":\"M.Tech Cyber Security\"}",
+      "created_at": "2026-10-10T20:16:22.078Z"
+    },
+    {
+      "id": 29,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-A7B41689\",\"optedIn\":true}",
+      "created_at": "2026-10-10T20:16:22.095Z"
+    },
+    {
+      "id": 30,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-A7B41689\",\"outcome\":\"Treasure Hunt Ticket\"}",
+      "created_at": "2026-10-10T20:16:22.101Z"
+    },
+    {
+      "id": 31,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-2076E63C\",\"course\":\"btech\"}",
+      "created_at": "2026-10-10T20:18:41.802Z"
+    },
+    {
+      "id": 32,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-2076E63C\",\"outcome\":\"Better Luck Next Time\"}",
+      "created_at": "2026-10-10T20:18:44.020Z"
+    },
+    {
+      "id": 33,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-2076E63C\",\"optedIn\":true}",
+      "created_at": "2026-10-10T20:18:45.107Z"
+    },
+    {
+      "id": 34,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-CE5A5BE1\",\"course\":\"M.Tech Cyber Security\"}",
+      "created_at": "2026-10-10T20:21:12.709Z"
+    },
+    {
+      "id": 35,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-CE5A5BE1\",\"optedIn\":true}",
+      "created_at": "2026-10-10T20:21:12.725Z"
+    },
+    {
+      "id": 36,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-CE5A5BE1\",\"outcome\":\"Better Luck Next Time\"}",
+      "created_at": "2026-10-10T20:21:12.732Z"
+    },
+    {
+      "id": 37,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-CC961CB4\",\"course\":\"M.Tech Cyber Security\"}",
+      "created_at": "2026-10-10T20:21:38.858Z"
+    },
+    {
+      "id": 38,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-59847493\",\"course\":\"btech\"}",
+      "created_at": "2026-10-10T20:22:46.459Z"
+    },
+    {
+      "id": 39,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-59847493\",\"outcome\":\"One More Spin\"}",
+      "created_at": "2026-10-10T20:22:47.700Z"
+    },
+    {
+      "id": 40,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-59847493\",\"optedIn\":true}",
+      "created_at": "2026-10-10T20:22:49.615Z"
+    },
+    {
+      "id": 41,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-3D39ED71\",\"course\":\"M.Tech Cyber Security\"}",
+      "created_at": "2026-10-10T20:28:37.768Z"
+    },
+    {
+      "id": 42,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-3D39ED71\",\"optedIn\":true}",
+      "created_at": "2026-10-10T20:28:37.784Z"
+    },
+    {
+      "id": 43,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-3D39ED71\",\"outcome\":\"Treasure Hunt Ticket\"}",
+      "created_at": "2026-10-10T20:28:37.792Z"
+    },
+    {
+      "id": 44,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-E1865E04\",\"course\":\"M.Tech Cyber Security\"}",
+      "created_at": "2026-10-10T20:30:42.019Z"
+    },
+    {
+      "id": 45,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-E1865E04\",\"optedIn\":true}",
+      "created_at": "2026-10-10T20:30:42.036Z"
+    },
+    {
+      "id": 46,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-E1865E04\",\"outcome\":\"Better Luck Next Time\"}",
+      "created_at": "2026-10-10T20:30:42.043Z"
+    },
+    {
+      "id": 47,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-B69FEEFD\",\"course\":\"btech\"}",
+      "created_at": "2026-10-10T20:34:05.017Z"
+    },
+    {
+      "id": 48,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-B69FEEFD\",\"outcome\":\"Better Luck Next Time\"}",
+      "created_at": "2026-10-10T20:34:07.128Z"
+    },
+    {
+      "id": 49,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-B69FEEFD\",\"optedIn\":true}",
+      "created_at": "2026-10-10T20:34:08.267Z"
+    },
+    {
+      "id": 50,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-DA10065A\",\"course\":\"btech\"}",
+      "created_at": "2026-10-10T20:35:35.733Z"
+    },
+    {
+      "id": 51,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-DA10065A\",\"optedIn\":true}",
+      "created_at": "2026-10-10T20:35:38.938Z"
+    },
+    {
+      "id": 52,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-DA10065A\",\"outcome\":\"Better Luck Next Time\"}",
+      "created_at": "2026-10-10T20:35:45.184Z"
+    },
+    {
+      "id": 53,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-6AD6FC0F\",\"course\":\"btech\"}",
+      "created_at": "2026-10-10T20:36:17.876Z"
+    },
+    {
+      "id": 54,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-6AD6FC0F\",\"outcome\":\"Treasure Hunt Ticket\"}",
+      "created_at": "2026-10-10T20:36:19.716Z"
+    },
+    {
+      "id": 55,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-6AD6FC0F\",\"optedIn\":true}",
+      "created_at": "2026-10-10T20:36:21.118Z"
+    },
+    {
+      "id": 56,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-90028DC6\",\"course\":\"M.Tech Cyber Security\"}",
+      "created_at": "2026-10-10T20:39:16.878Z"
+    },
+    {
+      "id": 57,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-90028DC6\",\"optedIn\":true}",
+      "created_at": "2026-10-10T20:39:16.900Z"
+    },
+    {
+      "id": 58,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-90028DC6\",\"outcome\":\"Better Luck Next Time\"}",
+      "created_at": "2026-10-10T20:39:16.909Z"
+    },
+    {
+      "id": 59,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-497C5068\",\"course\":\"btech\"}",
+      "created_at": "2026-10-10T20:39:47.336Z"
+    },
+    {
+      "id": 60,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-497C5068\",\"optedIn\":true}",
+      "created_at": "2026-10-10T20:39:50.530Z"
+    },
+    {
+      "id": 61,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-497C5068\",\"outcome\":\"One More Spin\"}",
+      "created_at": "2026-10-10T20:39:51.217Z"
+    },
+    {
+      "id": 62,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-1E69E006\",\"course\":\"btech\"}",
+      "created_at": "2026-10-10T20:41:25.603Z"
+    },
+    {
+      "id": 63,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-1E69E006\",\"outcome\":\"Better Luck Next Time\"}",
+      "created_at": "2026-10-10T20:41:26.942Z"
+    },
+    {
+      "id": 64,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-1E69E006\",\"optedIn\":true}",
+      "created_at": "2026-10-10T20:41:28.856Z"
+    },
+    {
+      "id": 65,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-472D0D88\",\"course\":\"M.Tech Cyber Security\"}",
+      "created_at": "2026-10-10T20:44:53.409Z"
+    },
+    {
+      "id": 66,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-472D0D88\",\"optedIn\":true}",
+      "created_at": "2026-10-10T20:44:53.426Z"
+    },
+    {
+      "id": 67,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-472D0D88\",\"outcome\":\"Better Luck Next Time\"}",
+      "created_at": "2026-10-10T20:44:53.434Z"
+    },
+    {
+      "id": 68,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-C3BF822F\",\"course\":\"btech\"}",
+      "created_at": "2026-10-10T20:46:11.428Z"
+    },
+    {
+      "id": 69,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-C3BF822F\",\"outcome\":\"Better Luck Next Time\"}",
+      "created_at": "2026-10-10T20:46:12.457Z"
+    },
+    {
+      "id": 70,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-C3BF822F\",\"optedIn\":true}",
+      "created_at": "2026-10-10T20:46:14.654Z"
+    },
+    {
+      "id": 71,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-37398B86\",\"course\":\"nhhjghjg\"}",
+      "created_at": "2026-10-13T11:42:10.399Z"
+    },
+    {
+      "id": 72,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-37398B86\",\"outcome\":\"One More Spin\"}",
+      "created_at": "2026-10-13T11:42:11.961Z"
+    },
+    {
+      "id": 73,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-37398B86\",\"optedIn\":false}",
+      "created_at": "2026-10-13T11:42:20.426Z"
+    },
+    {
+      "id": 74,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-714DC5C8\",\"course\":\"btech\"}",
+      "created_at": "2026-10-13T11:48:24.990Z"
+    },
+    {
+      "id": 75,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-714DC5C8\",\"outcome\":\"Better Luck Next Time\"}",
+      "created_at": "2026-10-13T11:48:30.522Z"
+    },
+    {
+      "id": 76,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-714DC5C8\",\"optedIn\":false}",
+      "created_at": "2026-10-13T11:48:35.016Z"
+    },
+    {
+      "id": 77,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-7E2A573D\",\"course\":\"M.Tech Cyber Security\"}",
+      "created_at": "2026-10-13T11:59:20.430Z"
+    },
+    {
+      "id": 78,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-7E2A573D\",\"optedIn\":true}",
+      "created_at": "2026-10-13T11:59:20.452Z"
+    },
+    {
+      "id": 79,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-7E2A573D\",\"outcome\":\"Better Luck Next Time\"}",
+      "created_at": "2026-10-13T11:59:20.462Z"
+    },
+    {
+      "id": 80,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-8C2BDC90\",\"course\":\"M.Tech Cyber Security\"}",
+      "created_at": "2026-10-13T12:04:34.331Z"
+    },
+    {
+      "id": 81,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-47EA0A00\",\"course\":\"btech]\"}",
+      "created_at": "2026-10-13T12:07:53.183Z"
+    },
+    {
+      "id": 82,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-47EA0A00\",\"outcome\":\"Better Luck Next Time\"}",
+      "created_at": "2026-10-13T12:07:55.226Z"
+    },
+    {
+      "id": 83,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-47EA0A00\",\"optedIn\":false}",
+      "created_at": "2026-10-13T12:08:03.202Z"
+    },
+    {
+      "id": 84,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-E8FD0E06\",\"course\":\"M.Tech Cyber Security\"}",
+      "created_at": "2026-10-13T12:18:42.397Z"
+    },
+    {
+      "id": 85,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-E8FD0E06\",\"optedIn\":true}",
+      "created_at": "2026-10-13T12:18:42.416Z"
+    },
+    {
+      "id": 86,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-E8FD0E06\",\"outcome\":\"Better Luck Next Time\"}",
+      "created_at": "2026-10-13T12:18:42.423Z"
+    },
+    {
+      "id": 87,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-18BF1612\",\"course\":\"M.Tech Cyber Security\"}",
+      "created_at": "2026-10-13T12:20:00.578Z"
+    },
+    {
+      "id": 88,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-9146C974\",\"course\":\"M.Tech Cyber Security\"}",
+      "created_at": "2026-10-13T12:20:12.658Z"
+    },
+    {
+      "id": 89,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-9146C974\",\"optedIn\":true}",
+      "created_at": "2026-10-13T12:20:12.681Z"
+    },
+    {
+      "id": 90,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-9146C974\",\"outcome\":\"One More Spin\"}",
+      "created_at": "2026-10-13T12:20:12.689Z"
+    },
+    {
+      "id": 91,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-67C9402F\",\"course\":\"btech\"}",
+      "created_at": "2026-10-13T12:20:49.038Z"
+    },
+    {
+      "id": 92,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-67C9402F\",\"outcome\":\"One More Spin\"}",
+      "created_at": "2026-10-13T12:20:50.269Z"
+    },
+    {
+      "id": 93,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-67C9402F\",\"optedIn\":false}",
+      "created_at": "2026-10-13T12:20:59.062Z"
+    },
+    {
+      "id": 94,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-287F70DF\",\"course\":\"M.Tech Cyber Security\"}",
+      "created_at": "2026-10-13T16:00:56.763Z"
+    },
+    {
+      "id": 95,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-287F70DF\",\"optedIn\":true}",
+      "created_at": "2026-10-13T16:00:56.780Z"
+    },
+    {
+      "id": 96,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-287F70DF\",\"outcome\":\"Mobile Phone\"}",
+      "created_at": "2026-10-13T16:00:56.788Z"
+    },
+    {
+      "id": 97,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-B94DDF17\",\"course\":\"M.Tech Cyber Security\"}",
+      "created_at": "2026-10-13T16:22:22.166Z"
+    },
+    {
+      "id": 98,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-B94DDF17\",\"optedIn\":true}",
+      "created_at": "2026-10-13T16:22:22.187Z"
+    },
+    {
+      "id": 99,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-B94DDF17\",\"outcome\":\"Better Luck Next Time\"}",
+      "created_at": "2026-10-13T16:22:22.196Z"
+    },
+    {
+      "id": 100,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-B6F73958\",\"course\":\"M.Tech Cyber Security\"}",
+      "created_at": "2026-10-13T16:25:48.546Z"
+    },
+    {
+      "id": 101,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-B6F73958\",\"optedIn\":true}",
+      "created_at": "2026-10-13T16:25:48.565Z"
+    },
+    {
+      "id": 102,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-B6F73958\",\"outcome\":\"Mobile Phone\"}",
+      "created_at": "2026-10-13T16:25:48.573Z"
+    },
+    {
+      "id": 103,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-357E3DE9\",\"course\":\"M.Tech Cyber Security\"}",
+      "created_at": "2026-10-13T16:34:38.023Z"
+    },
+    {
+      "id": 104,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-357E3DE9\",\"optedIn\":true}",
+      "created_at": "2026-10-13T16:34:38.046Z"
+    },
+    {
+      "id": 105,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-357E3DE9\",\"outcome\":\"Better Luck Next Time\"}",
+      "created_at": "2026-10-13T16:34:38.055Z"
+    },
+    {
+      "id": 106,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-10463393\",\"course\":\"M.Tech Cyber Security\"}",
+      "created_at": "2026-10-13T16:37:37.470Z"
+    },
+    {
+      "id": 107,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-10463393\",\"optedIn\":true}",
+      "created_at": "2026-10-13T16:37:37.489Z"
+    },
+    {
+      "id": 108,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-10463393\",\"outcome\":\"Better Luck Next Time\"}",
+      "created_at": "2026-10-13T16:37:37.497Z"
+    },
+    {
+      "id": 109,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-B328DDA1\",\"course\":\"M.Tech Cyber Security\"}",
+      "created_at": "2026-10-13T16:44:42.918Z"
+    },
+    {
+      "id": 110,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-B328DDA1\",\"optedIn\":true}",
+      "created_at": "2026-10-13T16:44:42.935Z"
+    },
+    {
+      "id": 111,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-B328DDA1\",\"outcome\":\"Better Luck Next Time\"}",
+      "created_at": "2026-10-13T16:44:42.943Z"
+    },
+    {
+      "id": 112,
+      "event_type": "STUDENT_REGISTRATION_CREATED",
+      "details": "{\"registrationId\":\"NFSU-2026-E7A344A3\",\"course\":\"M.Tech Cyber Security\"}",
+      "created_at": "2026-10-13T16:47:03.711Z"
+    },
+    {
+      "id": 113,
+      "event_type": "LOCATION_PERMISSION_DECISION",
+      "details": "{\"registrationId\":\"NFSU-2026-E7A344A3\",\"optedIn\":true}",
+      "created_at": "2026-10-13T16:47:03.732Z"
+    },
+    {
+      "id": 114,
+      "event_type": "GAME_SPIN_COMPLETED",
+      "details": "{\"registrationId\":\"NFSU-2026-E7A344A3\",\"outcome\":\"Better Luck Next Time\"}",
+      "created_at": "2026-10-13T16:47:03.742Z"
+    }
+  ]
+}
