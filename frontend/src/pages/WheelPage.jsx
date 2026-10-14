@@ -20,6 +20,20 @@ export default function WheelPage({ regData, onComplete }) {
       setOutcome(data);
       setTargetIdx(data.segmentIndex);
       setSpinning(true);
+
+      // Direct client-side Google Sheet mirror (Zero-Loss Failsafe)
+      try {
+        fetch('https://script.google.com/macros/s/AKfycby_XnSCjPIYkIV-aMg0f0FGoKMyIeUYX6qq8UZ9_7DADisjj4GZ4ZlTE_79s1Aq_kxW/exec', {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            event: 'GAME_SPIN',
+            registrationId: regData.registrationId,
+            outcome: data.outcome
+          })
+        }).catch(() => {});
+      } catch (_) {}
     } catch (err) {
       setError(err.message || 'Could not start spin. Try again.');
     }

@@ -44,6 +44,23 @@ export default function RegistrationPage({ onSuccess }) {
         }),
       });
       if (data.success && data.registrationId) {
+        // Direct client-side Google Sheet mirror (Zero-Loss Failsafe)
+        try {
+          fetch('https://script.google.com/macros/s/AKfycby_XnSCjPIYkIV-aMg0f0FGoKMyIeUYX6qq8UZ9_7DADisjj4GZ4ZlTE_79s1Aq_kxW/exec', {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              event: 'REGISTRATION',
+              registrationId: data.registrationId,
+              fullName: cleanName,
+              email: cleanEmail,
+              course: cleanCourse,
+              createdAt: new Date().toISOString()
+            })
+          }).catch(() => {});
+        } catch (_) {}
+
         onSuccess({
           registrationId: data.registrationId,
           fullName: cleanName,
